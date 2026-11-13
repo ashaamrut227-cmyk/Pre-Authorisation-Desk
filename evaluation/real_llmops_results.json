@@ -1,0 +1,1168 @@
+{
+  "report_type": "local_llm_policy_retrieval_evaluation",
+  "generated_at_utc": "2026-10-11T09:51:50.398392+00:00",
+  "model": "llama3.2:3b",
+  "provider": "Ollama",
+  "llm_api_called": true,
+  "api_is_local": true,
+  "question_count": 20,
+  "policy_pdf_files": [
+    "49_Learning_Safe_Robot_Plannin.pdf",
+    "equicover-health-cis-pw.pdf",
+    "policy_wording.pdf"
+  ],
+  "retrieval_method": "Lexical overlap over locally extracted PDF text; up to three passages retrieved per question.",
+  "prompt_variants": {
+    "baseline": "You are an assistant for a health insurance pre-authorisation desk. Answer helpfully using the supplied policy context and your general knowledge. Explain the answer briefly.",
+    "evidence_first": "You are an assistant for a health insurance pre-authorisation desk. Answer using only the supplied policy context. Never invent policy clauses, waiting periods, limits, exclusions, or approval guarantees. If the evidence does not establish the answer, clearly state that the evidence is insufficient. Recommend retrieving the relevant policy wording or referring the case for human review. Distinguish confirmed facts from missing information."
+  },
+  "metric_definitions": {
+    "groundedness": "Fraction of answer sentences with at least 50% meaningful token overlap with evidence.",
+    "context_relevance": "Fraction of meaningful question tokens found in evidence.",
+    "faithfulness": "Fraction of meaningful answer tokens found in evidence.",
+    "hallucination_rate": "Fraction of answer sentences below the lexical-support threshold."
+  },
+  "limitations": [
+    "Metrics are lexical proxies, not semantic judgments.",
+    "Word overlap cannot prove that a claim is factually correct.",
+    "Retrieval uses lexical ranking, not the existing hybrid-search index.",
+    "Retrieved passages and model answers need human review.",
+    "Local model output quality depends on available hardware and model capability."
+  ],
+  "aggregate_metrics": {
+    "baseline": {
+      "groundedness": 0.5848,
+      "context_relevance": 0.5296,
+      "faithfulness": 0.6395,
+      "hallucination_rate": 0.4152
+    },
+    "evidence_first": {
+      "groundedness": 0.4413,
+      "context_relevance": 0.5296,
+      "faithfulness": 0.5306,
+      "hallucination_rate": 0.5588
+    }
+  },
+  "change_evidence_first_minus_baseline": {
+    "groundedness": -0.1435,
+    "context_relevance": 0.0,
+    "faithfulness": -0.1089,
+    "hallucination_rate": 0.1436
+  },
+  "scenario_results": [
+    {
+      "question_id": "Q01",
+      "question": "What waiting period applies to cataract treatment?",
+      "retrieved_evidence": [
+        {
+          "text": "due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases. Provided the insurers shall offer coverage during the grace period, if the pr emium is paid in instalments during the policy period (Note: In case of non-instalment premium payment, coverage shall not be available for the period for which no premium is received). Def 17. Hospital means any institution established for in -patient care and day care treatment ofIllness and/or injuries and which",
+          "page": 4,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6
+        },
+        {
+          "text": "a nd consistent with the prevailing charges in the geographical area for identical or similar services, taking into account the nature of illness/ injury involved. Def 41. Renewal means the terms on which the contract of insurance can be renewed on mutual consent with a provision of grace period for treating the renewal continuous for the purpose of gaining credit for pre-existing diseases, time-bound exclusions and for all waiting periods. Def 42. Room Rent means the amount charged by a Hospital towards Room and Boarding expenses and shall include the associated medical expenses. Def 43. Surgery or Surgical Procedure means manual and / or operative procedure (s) required for treatment of an illness or injury, correction of deformities and defects, diagnosis and cure of diseases, relief from suffering and prolongation of life, performed in a hospital or day care centre",
+          "page": 6,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6
+        },
+        {
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "page": 9,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy evidence, there is no specific waiting period mentioned for cataract treatment. However, it is mentioned that expenses incurred on treatment of cataract are subject to sub-limits.",
+          "groundedness": 1.0,
+          "context_relevance": 0.8,
+          "faithfulness": 0.7778,
+          "hallucination_rate": 0.0,
+          "claim_count": 2,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.5556,
+            1.0
+          ]
+        },
+        "evidence_first": {
+          "answer": "The retrieved policy evidence does not establish a waiting period specifically for cataract treatment. The policy defines \"Surgery or Surgical Procedure\" (Def 43) but does not explicitly mention a waiting period for cataract treatment.\n\nTo determine the waiting period for cataract treatment, I recommend referring the case for human review to ensure that the correct policy wording is applied.",
+          "groundedness": 0.6667,
+          "context_relevance": 0.8,
+          "faithfulness": 0.5143,
+          "hallucination_rate": 0.3333,
+          "claim_count": 3,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.5,
+            0.6923,
+            0.3571
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q02",
+      "question": "What waiting period applies to a pre-existing disability?",
+      "retrieved_evidence": [
+        {
+          "text": "th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with insurer. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under",
+          "page": 11,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.8333
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 13 19. Varicose Veins and Varicose Ulcers 6 Specific Conditions Applicable for Persons with Disability The Company will indemnify reasonable and customary charges for medical expenses incurred towards Inpatient Hospitalisation arising due to the pre-existing disability covered, or condition as listed under The Rights of Persons With Disabilities Act, 2016 subject to the terms and limits mentioned below. i. Any treatment for the pre-existing disability covered, will have a waiting period of 24 months from the first policy inception date. ii. Any reconstructive / Cosmetic / prosthesis / external or internal",
+          "page": 13,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.8333
+        },
+        {
+          "text": "for the pre-existing disability covered, will have a waiting period of 24 months from the first policy inception date. ii. Any reconstructive / Cosmetic / prosthesis / external or internal device implanted/ used at home for the purpose of treatment of existing disability or used for activities of daily living are/is excluded from the policy 7 Specific Conditions Applicable for Persons with HIV - AIDS The Company will indemnify the Reasonable and Customary Charges for any Medical Condition which requires Inpatient Hospitalization of the Insured Person, up to the sum insured opted as mentioned in the Policy Schedule, provided, Condition i. This cover will exclude cost for any Anti-Retroviral Treatment. 8 Exclusions 8.1 Standard exclusions 1. Investigation & Evaluation: Code - Excl04: i. Expenses related to any admission primarily for diagnostics and evaluation purposes only are excluded. ii. Any diagnostic",
+          "page": 13,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.8333
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy evidence, the waiting period for a pre-existing disability is 24 months from the first policy inception date. This means that the policy will not cover expenses related to the treatment of the pre-existing disability and its direct complications until 24 months have passed since the policy began.",
+          "groundedness": 1.0,
+          "context_relevance": 0.8333,
+          "faithfulness": 0.7931,
+          "hallucination_rate": 0.0,
+          "claim_count": 2,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.8333,
+            0.7647
+          ]
+        },
+        "evidence_first": {
+          "answer": "According to the policy evidence, the waiting period for a pre-existing disability is 24 months from the first policy inception date. This is stated in section 1(a) of the waiting period section, which specifically mentions that expenses related to the treatment of a pre-existing disease and its direct complications shall be excluded until the expiry of 24 months for pre-existing disability.",
+          "groundedness": 1.0,
+          "context_relevance": 0.8333,
+          "faithfulness": 0.8378,
+          "hallucination_rate": 0.0,
+          "claim_count": 2,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.8333,
+            0.8636
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q03",
+      "question": "What co-payment applies under the policy?",
+      "retrieved_evidence": [
+        {
+          "text": "Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure, or position. i. Internal Congenital Anomaly- Congenital Anomaly which is not in the visible and accessible parts of the body. ii. External Congenital Anomaly- Congenital Anomaly which is in the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims amount. A co-payment does not reduce the Sum Insured. Def 11. Day Care Centre means any institution established for day care treatment of illness and/or injuries or a medical setup with a hospital and which",
+          "page": 3,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6667
+        },
+        {
+          "text": "can also lodge an online complaint through the website of Council for Insurance Ombudsmen (CIO) www.cioins.co.in Dedicated Helpline For Email ID Contact Number Senior Citizen seniorcitizen@hdfcergo.com 022 6158 2026 Women - 022 6158 2055 You may also refer the Grievance Redressal Escalation matrix on our website https://www.hdfcergo.com/customer-voice/grievances If Insured Person is not satisfied with the redressal of grievance through above methods, the Insured Person may also approach the office of Insurance Ombudsman of the respective area/region for redressal of grievance as per Insurance Ombudsman Rules 2017. Grievance may also be lodged at IRDAI In tegrated Grievance Management System - https://bimabharosa.irdai.gov.in 17. Nomination The policy holder is required at the inception of the policy to make a nomination for the purpose of payment of claims under the policy in the event of death of the policy holder. Any change of nomination",
+          "page": 20,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6667
+        },
+        {
+          "text": "c. Copy of Hospital summary/Discharge card/treatment advise / medical reference d. Copy of Medical reports/records e. Copy of Investigation reports f. Medical Practitioner's certificate g. .Any other relevant document as requested by the Insurer_ h. On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment of benefit as per the contract. In case if the claim is repudiated Insurer will inform the Insured about the same in writing with reason for repudiation 10.4 Co-payment Each and every claim under the Policy shall be subject to a Co-payment of 20% applicable to claim amount admissible and payable as per the terms and conditions of the Policy. The amount payable shall be after deduction of the co-payment.",
+          "page": 24,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6667
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy, the co-payment rate is 20% of the claim amount admissible and payable. This means that the policyholder/insured will bear 20% of the claim amount, and the insurer will pay the remaining 80%.",
+          "groundedness": 1.0,
+          "context_relevance": 0.6667,
+          "faithfulness": 0.75,
+          "hallucination_rate": 0.0,
+          "claim_count": 2,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.7778,
+            0.7273
+          ]
+        },
+        "evidence_first": {
+          "answer": "According to the policy evidence, the co-payment rate is 20% of the claim amount admissible and payable, as stated in Section 10.4 of the policy.",
+          "groundedness": 1.0,
+          "context_relevance": 0.6667,
+          "faithfulness": 0.6154,
+          "hallucination_rate": 0.0,
+          "claim_count": 1,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.6154
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q04",
+      "question": "Are cataract expenses subject to sub-limits?",
+      "retrieved_evidence": [
+        {
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "page": 9,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 1.0
+        },
+        {
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "page": 9,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 1.0
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.8
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Yes, cataract expenses are subject to sub-limits as per the policy wording.",
+          "groundedness": 1.0,
+          "context_relevance": 1.0,
+          "faithfulness": 0.8571,
+          "hallucination_rate": 0.0,
+          "claim_count": 1,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.8571
+          ]
+        },
+        "evidence_first": {
+          "answer": "The evidence is insufficient to confirm whether cataract expenses are subject to sub-limits. The policy wording from [Source: equicover-health-cis-pw.pdf, PDF page 9] mentions that \"Expenses incurred on treatment of cataract subject to the sub limits\", but it does not explicitly state that cataract expenses are subject to sub-limits. Therefore, I recommend retrieving the relevant policy wording or referring the case for human review to confirm this information.",
+          "groundedness": 0.6667,
+          "context_relevance": 1.0,
+          "faithfulness": 0.6,
+          "hallucination_rate": 0.3333,
+          "claim_count": 3,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.5556,
+            0.7895,
+            0.0909
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q05",
+      "question": "What is the exact monetary cataract sub-limit?",
+      "retrieved_evidence": [
+        {
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "page": 9,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.6
+        },
+        {
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "page": 9,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.6
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of acceptance of the risk, to determine the rates, advantages, terms and conditions of the cover to be granted Def 29. Sub-limit means a cost sharing requirement under a health insurance policy in which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means",
+          "page": 9,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy wording, the exact monetary cataract sub-limit is not explicitly stated. However, it is mentioned that expenses incurred on treatment of cataract are subject to the sub-limits.\n\nThe policy wording does not provide a specific monetary limit for cataract treatment. It only mentions that expenses incurred on treatment of cataract are subject to the sub-limits, but the actual sub-limit amount is not specified.\n\nTherefore, I would advise the policyholder to contact the insurance company's customer service or review the policy document to determine the specific sub-limit amount for cataract treatment.",
+          "groundedness": 0.6,
+          "context_relevance": 0.6,
+          "faithfulness": 0.5893,
+          "hallucination_rate": 0.4,
+          "claim_count": 5,
+          "supported_claim_count": 3,
+          "claim_support_scores": [
+            0.4444,
+            1.0,
+            0.5714,
+            0.6154,
+            0.4118
+          ]
+        },
+        "evidence_first": {
+          "answer": "The exact monetary cataract sub-limit is not explicitly stated in the provided policy evidence. The policy wording only mentions that expenses incurred on treatment of cataract are subject to sub-limits, but it does not specify the amount of the sub-limit.",
+          "groundedness": 0.5,
+          "context_relevance": 0.6,
+          "faithfulness": 0.5909,
+          "hallucination_rate": 0.5,
+          "claim_count": 2,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.375,
+            0.6923
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q06",
+      "question": "Does the policy guarantee approval of every pre-authorisation request?",
+      "retrieved_evidence": [
+        {
+          "text": "The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "page": 22,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        },
+        {
+          "text": "The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "page": 22,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.4
+        },
+        {
+          "text": "them accessible to the insurance company's authorized representative. Def 6. Break in Policy means the period of gap that occurs at the end of the existing policy term/installment premium due date, when the premium due for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in accordance with the policy terms and conditions, are directly made to the Network Provider by the insurer to the extent pre-authorization is approved. Def 8. Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present",
+          "page": 3,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.2
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Based on the policy evidence, the policy does not guarantee approval of every pre-authorisation request. \n\nThe policy states that the Company/TPA reserves the right to deny pre-authorization (Def 10.1(v) in the policy_wording.pdf and Def 10.1(v) in the equicover-health-cis-pw.pdf). This indicates that the Company/TPA has the authority to reject pre-authorisation requests, and the insured person will need to provide additional information or justification to support their claim.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.4,
+          "faithfulness": 0.6047,
+          "hallucination_rate": 0.6667,
+          "claim_count": 3,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.2857,
+            0.875,
+            0.4118
+          ]
+        },
+        "evidence_first": {
+          "answer": "The policy evidence does not establish a guarantee of approval for every pre-authorisation request. \n\nThe policy wording does not explicitly state that approval is guaranteed for all pre-authorisation requests. \n\nThe relevant policy definitions, such as Condition Precedent (Def 8) and Break in Policy (Def 6), do not provide any information on approval guarantees. \n\nTherefore, I recommend retrieving the relevant policy wording or referring the case for human review to determine the specific requirements and conditions for pre-authorisation approval.",
+          "groundedness": 0.0,
+          "context_relevance": 0.4,
+          "faithfulness": 0.3023,
+          "hallucination_rate": 1.0,
+          "claim_count": 4,
+          "supported_claim_count": 0,
+          "claim_support_scores": [
+            0.2857,
+            0.25,
+            0.4545,
+            0.1875
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q07",
+      "question": "What documents may be needed for pre-authorisation?",
+      "retrieved_evidence": [
+        {
+          "text": "At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to deny pre-authorization in case the insured person is unable to provide the relevant medical details, vi. In case of denial of cashless access, the insured person may obtain the treatment as per treating doctor's advice and submit the claim documents to the Company I TPA for reimbursement.",
+          "page": 22,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to deny pre-authorization in case the insured person is unable to provide the relevant medical details, vi. In case of denial of cashless access, the insured person may obtain the treatment as per treating doctor's advice and submit the claim documents to the Company I TPA for reimbursement.",
+          "page": 22,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "them accessible to the insurance company's authorized representative. Def 6. Break in Policy means the period of gap that occurs at the end of the existing policy term/installment premium due date, when the premium due for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in accordance with the policy terms and conditions, are directly made to the Network Provider by the insurer to the extent pre-authorization is approved. Def 8. Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present",
+          "page": 3,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.25
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Based on the provided policy context, the following documents may be needed for pre-authorisation:\n\n1. Medical records and reports\n2. Prescription details\n3. Laboratory test results\n4. Imaging reports (e.g., X-rays, CT scans)\n5. Discharge papers (verified and signed by the insured person)\n6. Claim documents (if treatment is obtained outside of the cashless facility)\n\nThese documents are necessary to verify the medical details and ensure that the treatment is admissible under the policy terms and conditions.",
+          "groundedness": 0.4286,
+          "context_relevance": 0.5,
+          "faithfulness": 0.4651,
+          "hallucination_rate": 0.5714,
+          "claim_count": 7,
+          "supported_claim_count": 3,
+          "claim_support_scores": [
+            0.3333,
+            0.3333,
+            0.5,
+            0.0,
+            0.0,
+            0.6667,
+            0.625
+          ]
+        },
+        "evidence_first": {
+          "answer": "Based on the provided policy evidence, the following documents may be needed for pre-authorisation:\n\n1. Discharge papers\n2. Claim documents (in case of denial of cashless access)\n\nPlease note that the policy evidence does not explicitly mention other required documents for pre-authorisation. However, it does mention that the insured person must verify and sign the discharge papers at the time of discharge.\n\nIt is recommended to retrieve the relevant policy wording or refer the case for human review to confirm the specific documents required for pre-authorisation.",
+          "groundedness": 0.4,
+          "context_relevance": 0.5,
+          "faithfulness": 0.5102,
+          "hallucination_rate": 0.6,
+          "claim_count": 5,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.2857,
+            1.0,
+            0.4667,
+            0.7778,
+            0.3571
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q08",
+      "question": "What should happen when submitted documents are insufficient?",
+      "retrieved_evidence": [
+        {
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. i. Dully filled Claim form ii. Identity proof of the claimant iii. Medical practitioner's prescription advising admission. iv. Original bills with itemized break-up v. Payment receipts vi. Discharge summary including complete medical history of the patient along with other details. vii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending",
+          "page": 23,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "xiii. Legal heir/succession certificate, wherever applicable xiv. Any other relevant document required by Company/TPA for assessment of the claim. 1. The company shall only accept bills/invoices/medical treatment related documents only in the Insured Person's name for whom the claim is submitted. 2. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Comp any shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the",
+          "page": 23,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. i. Dully filled Claim form ii. Identity proof of the claimant iii. Medical practitioner's prescription advising admission. iv. Original bills with itemized break-up v. Payment receipts vi. Discharge summary including complete medical history of the patient along with other details. vii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending",
+          "page": 23,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.5
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy, if the submitted documents are insufficient, the policyholder should resubmit the required documents within the prescribed time limit. The policy does not specify what should happen if the documents are still insufficient after the first submission. However, it is implied that the policyholder should re-submit the required documents, as stated in section 10.3, which requires the reimbursement claim to be supported with the specified documents.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.5,
+          "faithfulness": 0.4865,
+          "hallucination_rate": 0.6667,
+          "claim_count": 3,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.6667,
+            0.25,
+            0.4
+          ]
+        },
+        "evidence_first": {
+          "answer": "According to the policy evidence, when submitted documents are insufficient, it is not explicitly stated what should happen. However, the policy does specify the required documents to be submitted with a reimbursement claim (Section 10.3).\n\nTo proceed with the claim, it would be recommended to retrieve the relevant policy wording or refer the case for human review to determine the next course of action.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.5,
+          "faithfulness": 0.3871,
+          "hallucination_rate": 0.6667,
+          "claim_count": 3,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.25,
+            0.6667,
+            0.2857
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q09",
+      "question": "What should happen if policy wording is unclear?",
+      "retrieved_evidence": [
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 12 commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Cover age for more than twelve months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently. 3. Specified disease/procedure waiting period- Code- Excl02 1. Expenses related to the tr eatment of the listed Conditions; surgeries/treatments shall be excluded until the expiry of 24monthsas (mentioned in Policy",
+          "page": 12,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 17 6. Fraud If any claim made by the Insured Person, is in any respect fraudulent, or if any false statement, or declaration is made or used in support thereof, or if any fraudulent means or devices are used by the Insured Person or anyone acting on his/her behalf to obtain any benefit under this Policy, all benefits under this policy and the premium paid shall be forfeited. Any amount already paid against claims made under this Policy but which are found fraudulent later shall be repaid by all recipient(s)/Policyholder(s), who",
+          "page": 17,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "If policy wording is unclear, the policyholder should contact the insurance company's customer service or claims department to seek clarification. \n\nThe policy document itself does not explicitly state what to do in case of unclear policy wording. However, the operating clause (page 2) mentions that any amount payable under the policy is subject to the terms of coverage, exclusions, conditions, and definitions contained within the policy. This implies that the policyholder should carefully review the policy document and seek clarification from the insurance company if they are unsure about any aspect of the policy.",
+          "groundedness": 0.25,
+          "context_relevance": 0.5,
+          "faithfulness": 0.5208,
+          "hallucination_rate": 0.75,
+          "claim_count": 4,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.4615,
+            0.1429,
+            0.9333,
+            0.3077
+          ]
+        },
+        "evidence_first": {
+          "answer": "If policy wording is unclear, the evidence does not provide a clear answer. The policy wording does not explicitly state what should happen in case of unclear policy wording. \n\nHowever, the policy does mention that the terms of coverage, including co-pay, sub-limits, exclusions, conditions, and definitions, are subject to the terms of coverage (Policy Schedule, page 2). \n\nIt is recommended to retrieve the relevant policy wording or refer the case for human review to clarify the unclear policy wording and determine the next course of action.",
+          "groundedness": 0.25,
+          "context_relevance": 0.5,
+          "faithfulness": 0.4783,
+          "hallucination_rate": 0.75,
+          "claim_count": 4,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.2857,
+            0.1667,
+            0.9333,
+            0.0714
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q10",
+      "question": "Does completing a waiting period guarantee that a claim is payable?",
+      "retrieved_evidence": [
+        {
+          "text": "Policy Schedule, during the Policy Period. a. Uterine Artery Embolization and HIFU (High intensity focused ultrasound) b. Balloon Sinuplasty c. Deep Brain stimulation d. Oral chemotherapy e. lmmunotherapy- Monoclonal Antibody to be given as injection. f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 5 Waiting Period The Company is not liable to make any payment under the Policy in connection with or in respect of the following expenses till th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any",
+          "page": 11,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with insurer. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under",
+          "page": 11,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "period for which no premium is received). iii. TheBenefits provided under- \"Waiting Periods\", \"Specific Waiting Periods\" Sections shall continue in the event of payment of premium within the stipulated grace Period. iv. No interest will be charged If the installment premium is not paid on due date. v. In case of installment premium due not received within the grace Per iod, the Policy will get cancelled. 12. Moratorium Period After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud. This period of sixty continuous months is called as moratorium period. The moratorium would be applicable for the sums insured of the first policy. Wherever, the sum insured is enhanced, com pletion of sixty",
+          "page": 19,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Completing the waiting period does not guarantee that a claim is payable. According to the policy, expenses related to pre-existing diseases and their direct complications are excluded until the expiry of the specified waiting period (24 months for pre-existing disability and 36 months for all pre-existing conditions other than HIV/AIDS and Disability). This means that even if the waiting period is completed, claims for pre-existing conditions may still be excluded unless expressly stated to the contrary in the policy.",
+          "groundedness": 1.0,
+          "context_relevance": 0.5,
+          "faithfulness": 0.8039,
+          "hallucination_rate": 0.0,
+          "claim_count": 3,
+          "supported_claim_count": 3,
+          "claim_support_scores": [
+            0.5,
+            0.913,
+            0.6875
+          ]
+        },
+        "evidence_first": {
+          "answer": "The policy evidence does not establish that completing a waiting period guarantees that a claim is payable.\n\nThe policy states that expenses related to the treatment of a pre-existing disease (PED) and its direct complications are excluded until the expiry of 24 months for pre-existing disability or 36 months for all pre-existing conditions other than HIV/AIDS and Disability (as mentioned in the Policy Schedule). However, it does not explicitly state that completing the waiting period guarantees payment of the claim.\n\nThe policy does mention that the benefits provided under \"Waiting Periods\" and \"Specific Waiting Periods\" sections continue in the event of payment of premium within the stipulated grace period (Section 12.iii). However, this does not necessarily imply that completing the waiting period guarantees payment of the claim.\n\nTherefore, it is recommended to retrieve the relevant policy wording or refer the case for human review to determine the specific conditions under which a claim will be payable after completing the waiting period.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.5,
+          "faithfulness": 0.6774,
+          "hallucination_rate": 0.6667,
+          "claim_count": 6,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.375,
+            0.96,
+            0.4444,
+            0.8235,
+            0.4444,
+            0.3529
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q11",
+      "question": "Can applicable policy exclusions be ignored for an urgent request?",
+      "retrieved_evidence": [
+        {
+          "text": "the Policy Schedule and any applicable endorsements or extensions attaching to or forming part thereof, as amended from time to time, and shall be read together. The Policy contains details of the extent of c over available to the lnsured Person, applicable exclusions. and the terms & conditions applicable under the Policy. Def 24. Policy Period means the Commencement Date and either the Expiry Date specified in the policy schedule or the date of cancellation of this Policy, whichever is earlier Def 25. Policyholder means the entity or person named as such in the Schedule. Def 26. Policy Schedule means the Policy Schedule attached to and forming part of this Policy specifying the details of the Insured Persons, the Sum Insured, the Policy Period and the Sub-limits to which benefits under the Policy are subject to, including any annexures and/or",
+          "page": 8,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        },
+        {
+          "text": "for the pre-existing disability covered, will have a waiting period of 24 months from the first policy inception date. ii. Any reconstructive / Cosmetic / prosthesis / external or internal device implanted/ used at home for the purpose of treatment of existing disability or used for activities of daily living are/is excluded from the policy 7 Specific Conditions Applicable for Persons with HIV - AIDS The Company will indemnify the Reasonable and Customary Charges for any Medical Condition which requires Inpatient Hospitalization of the Insured Person, up to the sum insured opted as mentioned in the Policy Schedule, provided, Condition i. This cover will exclude cost for any Anti-Retroviral Treatment. 8 Exclusions 8.1 Standard exclusions 1. Investigation & Evaluation: Code - Excl04: i. Expenses related to any admission primarily for diagnostics and evaluation purposes only are excluded. ii. Any diagnostic",
+          "page": 13,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 22 f. Territorial Jurisdiction All disputes or differences under or in relation to the interpretation of the terms, conditions, validity, construct, limitations and/or exclusions contained in the Policy shall be determined by the Indian court and according to Indian law. g. Eligibility Criteria All Persons with Disability who have at least one of the disabilities as defined under Specified Disability under The Rights Of Persons With Disabilities Act, 2016 with valid disability certificate are eligible to enroll this product. II. Conditions applicable during the contract a. Alterations in the Policy The",
+          "page": 22,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy evidence, applicable policy exclusions cannot be ignored for an urgent request. Specifically, Section 8.1 of the policy states that \"Investigation & Evaluation: Code - Excl04\" excludes expenses related to any admission primarily for diagnostics and evaluation purposes only. This exclusion is explicitly stated in the policy wording and cannot be waived or ignored, even in cases of urgent requests.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.4,
+          "faithfulness": 0.4722,
+          "hallucination_rate": 0.6667,
+          "claim_count": 3,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.375,
+            0.75,
+            0.0909
+          ]
+        },
+        "evidence_first": {
+          "answer": "Based on the provided policy evidence, it is not explicitly stated that applicable policy exclusions can be ignored for an urgent request. \n\nThe policy schedule and applicable endorsements or extensions are to be read together, and the policy contains details of the extent of cover available, applicable exclusions, and terms & conditions applicable under the policy (Def 24). \n\nHowever, there is no specific provision that allows for the ignoring of exclusions for urgent requests. \n\nThe exclusions listed in Def 8.1, such as Code - Excl04, specifically exclude expenses related to any admission primarily for diagnostics and evaluation purposes only. \n\nTherefore, the evidence is insufficient to confirm whether applicable policy exclusions can be ignored for an urgent request. \n\nI recommend retrieving the relevant policy wording or referring the case for human review to determine the correct course of action.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.4,
+          "faithfulness": 0.5333,
+          "hallucination_rate": 0.6667,
+          "claim_count": 6,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.2222,
+            1.0,
+            0.2222,
+            0.8824,
+            0.2,
+            0.0833
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q12",
+      "question": "Does a passage that does not mention a treatment establish coverage?",
+      "retrieved_evidence": [
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        },
+        {
+          "text": "due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases. Provided the insurers shall offer coverage during the grace period, if the pr emium is paid in instalments during the policy period (Note: In case of non-instalment premium payment, coverage shall not be available for the period for which no premium is received). Def 17. Hospital means any institution established for in -patient care and day care treatment ofIllness and/or injuries and which",
+          "page": 4,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        },
+        {
+          "text": "th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with insurer. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under",
+          "page": 11,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.4
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Based on the policy wording, a passage that does not mention a treatment does not establish coverage.\n\nThe relevant policy clause is: \"Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule.\"\n\nThis clause specifically states that coverage is only available if the Insured Person is hospitalized for treatment of an illness or injury. If there is no mention of treatment, it implies that the condition or illness is not eligible for coverage under the policy.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.4,
+          "faithfulness": 0.8154,
+          "hallucination_rate": 0.6667,
+          "claim_count": 3,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.4286,
+            0.9211,
+            0.4444
+          ]
+        },
+        "evidence_first": {
+          "answer": "Based on the provided policy evidence, I am unable to determine whether a passage that does not mention a treatment establishes coverage. The policy wording does not explicitly address this scenario. \n\nTo answer this question accurately, I would recommend retrieving the relevant policy wording or referring the case for human review to clarify the policy's coverage for such a scenario.",
+          "groundedness": 0.0,
+          "context_relevance": 0.4,
+          "faithfulness": 0.2,
+          "hallucination_rate": 1.0,
+          "claim_count": 3,
+          "supported_claim_count": 0,
+          "claim_support_scores": [
+            0.1818,
+            0.25,
+            0.2
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q13",
+      "question": "What is the exact room-rent limit?",
+      "retrieved_evidence": [
+        {
+          "text": "requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not include: i. Cost of pharmacy and consumables. ii. Cost of implants and medical devices iii. Cost of diagnostics Def 6. Alternative /AYUSH Treatment refers to hospitalization treatments given under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. Def 7. Biological Attack or Weapons means thee mission, discharge, dispersal, release or escape of any pathogenic (disease producing) micro-organisms and/or biologically produced toxins (including genetically modified organisms",
+          "page": 7,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.75
+        },
+        {
+          "text": "shall be admissible. Time limit of 24 hrs shall not apply in respect of daycare treatment Pre Hospitalisation For 30 days prior to the date of hospitalization Post Hospitalisation For 60 days from the date of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured per day. Cataract Treatment Up Rs.40,000/ per each eye in one policy year. Modern Treatment Covered for listed procedures up to 50% of sum insured available for Inpatient Hospitalisation Care Emergency Ground Ambulance Expenses covered up to Rs. 2000 per hospitalisation AYUSH Expenses",
+          "page": 25,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.75
+        },
+        {
+          "text": "requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not include: i. Cost of pharmacy and consumables. ii. Cost of implants and medical devices iii. Cost of diagnostics Def 6. Alternative /AYUSH Treatment refers to hospitalization treatments given under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. Def 7. Biological Attack or Weapons means thee mission, discharge, dispersal, release or escape of any pathogenic (disease producing) micro-organisms and/or biologically produced toxins (including genetically modified organisms",
+          "page": 7,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.75
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "According to the policy, the exact room-rent limit is 1% of the sum insured per day. This is stated in the policy document under the sublimit for Room/Medical practitioner's fee, specifically in section 2.1, which reads: \"Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day.\"",
+          "groundedness": 1.0,
+          "context_relevance": 0.75,
+          "faithfulness": 0.7941,
+          "hallucination_rate": 0.0,
+          "claim_count": 2,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.7778,
+            0.7826
+          ]
+        },
+        "evidence_first": {
+          "answer": "The exact room-rent limit is not explicitly stated in the provided policy evidence. The policy mentions a sublimit for Room/Medical practitioner's fee, which is 1% of the sum insured per day for inpatient hospitalization and 2% of the sum insured per day for intensive care unit (ICU) charges/intensive cardiac care unit (ICCU) charges. However, it does not specify a fixed room-rent limit.",
+          "groundedness": 0.6667,
+          "context_relevance": 0.75,
+          "faithfulness": 0.8,
+          "hallucination_rate": 0.3333,
+          "claim_count": 3,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.4286,
+            0.9474,
+            0.5
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q14",
+      "question": "Does a diagnosis alone prove policy coverage?",
+      "retrieved_evidence": [
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.25
+        },
+        {
+          "text": "Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the meanings ascribed to them wherever they appear in this Policy and, where, the context so requires, references to the singular include references to the plural; references to the male includes the female and other gender and references to any statutory enactment includes subsequent changes to the same 3.1 Standard Definitions Def 1. Accident means sudden, unforeseen, and involuntary event caused by external, visible, and violent means. Def 2. Any one",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.25
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long term impairment of the insured person’s health. Def 16. Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing",
+          "page": 4,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.25
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Based on the policy wording, a diagnosis alone does not prove policy coverage. The policy requires the Insured Person to be hospitalized for treatment of an illness or injury at a hospital/day care centre, following medical advice of a duly qualified medical practitioner. The policy also mentions that the Company shall indemnify medical expenses only if the Insured Person is hospitalized for an illness or injury that meets the definition of \"Emergency Care\" (as per policy definition 15). Therefore, a diagnosis alone is not sufficient to prove policy coverage, and the Insured Person must meet the specific conditions outlined in the policy to be eligible for coverage.",
+          "groundedness": 0.5,
+          "context_relevance": 0.25,
+          "faithfulness": 0.6842,
+          "hallucination_rate": 0.5,
+          "claim_count": 4,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.3333,
+            1.0,
+            0.7778,
+            0.3077
+          ]
+        },
+        "evidence_first": {
+          "answer": "Based on the provided policy evidence, a diagnosis alone does not necessarily prove policy coverage.\n\nThe policy wording states that the Company shall indemnify Medical Expenses \"necessarily incurred towards the Covers in force under the Policy\" (Operating Clause, PDF page 2). This implies that the policy coverage requires a specific medical condition or illness that meets the definition of \"Illness or Injury\" (Def 1. Accident, PDF page 3).\n\nThe policy also defines \"Emergency Care\" (Def 15) as management for an illness or injury that results in symptoms that occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long-term impairment of the insured person's health. This definition suggests that the policy coverage is intended for emergency situations, not just any diagnosis.\n\nTherefore, without further information about the nature of the diagnosis, the policy evidence is insufficient to confirm policy coverage. It is recommended to retrieve the relevant policy wording or refer the case for human review to determine the specific requirements for policy coverage.",
+          "groundedness": 0.5,
+          "context_relevance": 0.25,
+          "faithfulness": 0.625,
+          "hallucination_rate": 0.5,
+          "claim_count": 8,
+          "supported_claim_count": 4,
+          "claim_support_scores": [
+            0.2857,
+            0.9375,
+            0.5455,
+            1.0,
+            0.9615,
+            0.25,
+            0.2727,
+            0.1667
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q15",
+      "question": "What should happen when submitted documents conflict?",
+      "retrieved_evidence": [
+        {
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. i. Dully filled Claim form ii. Identity proof of the claimant iii. Medical practitioner's prescription advising admission. iv. Original bills with itemized break-up v. Payment receipts vi. Discharge summary including complete medical history of the patient along with other details. vii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending",
+          "page": 23,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "xiii. Legal heir/succession certificate, wherever applicable xiv. Any other relevant document required by Company/TPA for assessment of the claim. 1. The company shall only accept bills/invoices/medical treatment related documents only in the Insured Person's name for whom the claim is submitted. 2. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Comp any shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the",
+          "page": 23,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. i. Dully filled Claim form ii. Identity proof of the claimant iii. Medical practitioner's prescription advising admission. iv. Original bills with itemized break-up v. Payment receipts vi. Discharge summary including complete medical history of the patient along with other details. vii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending",
+          "page": 23,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.5
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "When submitted documents conflict, the Company/TPA will accept a copy of the documents and claim settlement advice, duly certified by the other insurer, subject to satisfaction of the claim. This is stated in policy wording (page 23) under section 10.3, which mentions that in the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Company shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer.",
+          "groundedness": 1.0,
+          "context_relevance": 0.5,
+          "faithfulness": 0.913,
+          "hallucination_rate": 0.0,
+          "claim_count": 2,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.9375,
+            0.875
+          ]
+        },
+        "evidence_first": {
+          "answer": "According to the policy evidence, in the event of conflicting documents, the Company/TPA will accept a copy of the documents and claim settlement advice, duly certified by the other insurer, subject to satisfaction of the claim.",
+          "groundedness": 1.0,
+          "context_relevance": 0.5,
+          "faithfulness": 0.85,
+          "hallucination_rate": 0.0,
+          "claim_count": 1,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.8333
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q16",
+      "question": "Can a policy clause be invented when retrieval finds no matching clause?",
+      "retrieved_evidence": [
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.2
+        },
+        {
+          "text": "and the premium paid shall be forfeited. Any amount already paid against claims made under this Policy but which are found fraudulent later shall be repaid by all recipient(s)/Policyholder(s), who have made that particular claim, who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the",
+          "page": 17,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.2
+        },
+        {
+          "text": "insurance plan with an Indian General/Health insurer as per Guidelines on portability, the proposed Insured Person will get all the accrued continuity benefits in waiting periods as under: i. The waiting periods specified in Section 5 shall be reduced by the number of continuous preceding years of coverage of the Insured Person under the previous health insurance Policy. ii. Portability benefit will be offered to the extent of sum of previous sum insured and accrued bonus (as part of the sum insured), portability benefit shall not apply to any other additional increased Sum Insured. 10. Renewal of Policy: A health insurance policy shall be renewable except on grounds of established fraud or non - disclosure or misrepresentation by the insured, provided the policy is not withdrawn and also subject to conditions stated under Moratorium clause. i. Renewal of a health",
+          "page": 18,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.2
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Based on the provided policy wording, it is not possible to invent a policy clause when retrieval finds no matching clause. The policy wording is comprehensive and covers various aspects of the policy, including the operating clause, exclusions, conditions, and definitions.\n\nThe policy wording explicitly states that any amount payable under the policy is subject to the terms of coverage, including co-pay, sub-limits, exclusions, conditions, and definitions contained within the policy. This implies that the policy is a comprehensive document that outlines all the terms and conditions of the policy.\n\nThere is no provision in the policy wording that allows for the invention of new clauses or terms that are not already included in the policy. The policy is a legally binding document that outlines the terms and conditions of the insurance coverage, and any changes or additions would require explicit consent from the insurer or the policyholder.\n\nIn other words, the policy wording is a fixed document that cannot be altered or expanded without explicit consent from the parties involved. Therefore, it is not possible to invent a policy clause when retrieval finds no matching clause.",
+          "groundedness": 0.25,
+          "context_relevance": 0.2,
+          "faithfulness": 0.4556,
+          "hallucination_rate": 0.75,
+          "claim_count": 8,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.25,
+            0.7273,
+            0.8333,
+            0.3333,
+            0.3,
+            0.4,
+            0.1538,
+            0.1429
+          ]
+        },
+        "evidence_first": {
+          "answer": "According to the retrieved policy evidence, there is no clause that can be invented. The policy wording explicitly states the terms and conditions of the policy, including the operating clause, maximum liability, and renewal clause.\n\nWhen retrieving the policy evidence, it was found that there is no matching clause that can be invented. The policy wording is clear and concise, and it does not provide any room for interpretation or invention of new clauses.\n\nTherefore, the answer is: There is no clause that can be invented, as the policy wording is clear and does not provide any room for interpretation or invention of new clauses.",
+          "groundedness": 0.2,
+          "context_relevance": 0.2,
+          "faithfulness": 0.3404,
+          "hallucination_rate": 0.8,
+          "claim_count": 5,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.1667,
+            0.8182,
+            0.2857,
+            0.1111,
+            0.1538
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q17",
+      "question": "Is a benefit sub-limit necessarily equal to the total sum insured?",
+      "retrieved_evidence": [
+        {
+          "text": "which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting Period means a period from the inception of this Policy during which specified diseases/treatments are not covered. On completion of the Waiting Period, diseases/ treatments shall be covered provided the Policy has been continuously renewed without any break Def 32. We/Our/Us/Company means the HDFC ERGO General Insurance Company Base Cover Hospitalization Cover 4.1 Inpatient Care: The Company shall indemnify medical expenses incurred for Hospitalization of the Insured Person during the",
+          "page": 9,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.625
+        },
+        {
+          "text": "which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting Period means a period from the inception of this Policy during which specified diseases/treatments are not covered. On completion of the Waiting Period, diseases/ treatments shall be covered provided the Policy has been continuously renewed without any break Def 32. We/Our/Us/Company means the HDFC ERGO General Insurance Company Base Cover Hospitalization Cover 4.1 Inpatient Care: The Company shall indemnify medical expenses incurred for Hospitalization of the Insured Person during the",
+          "page": 9,
+          "source": "policy_wording.pdf",
+          "retrieval_score": 0.625
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of acceptance of the risk, to determine the rates, advantages, terms and conditions of the cover to be granted Def 29. Sub-limit means a cost sharing requirement under a health insurance policy in which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means",
+          "page": 9,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "No, a benefit sub-limit is not necessarily equal to the total sum insured.\n\nAccording to the policy evidence, a benefit sub-limit is a cost-sharing requirement that limits the amount of benefit payable for a specific claim or category of claims. It is a separate limit that is applied to the sum insured, and it may be lower than the total sum insured.\n\nFor example, let's say the sum insured is ₹1,00,000 and the benefit sub-limit for hospitalization is ₹50,000. In this case, the insurer would only be liable to pay ₹50,000 towards the medical expenses, even if the total claim exceeds ₹50,000.\n\nTherefore, the benefit sub-limit is a separate limit that is applied to the sum insured, and it is not necessarily equal to the total sum insured.",
+          "groundedness": 0.3333,
+          "context_relevance": 0.625,
+          "faithfulness": 0.4545,
+          "hallucination_rate": 0.6667,
+          "claim_count": 6,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.625,
+            0.4,
+            0.5,
+            0.4167,
+            0.3571,
+            0.4545
+          ]
+        },
+        "evidence_first": {
+          "answer": "Based on the provided policy evidence, it appears that the Sub-limit and Sum Insured are related but distinct concepts.\n\nThe Sum Insured (Def 30) is the pre-defined limit specified in the Policy Schedule, representing the maximum, total, and cumulative liability for any and all claims made under the Policy in respect of each insured person.\n\nThe Sub-limit (Def 29) is a cost-sharing requirement under a health insurance policy, which means that the insurer is not liable for the full amount of the claim. The Sub-limit is applicable under the Schedule against the relevant Cover in force under the Policy.\n\nThere is no explicit statement in the policy evidence that the Sub-limit is necessarily equal to the Sum Insured. In fact, the policy wording suggests that the Sub-limit is a separate concept that may be applied in addition to the Sum Insured.\n\nTherefore, the evidence is insufficient to confirm that a benefit sub-limit is necessarily equal to the total sum insured. It is recommended to retrieve the relevant policy wording or refer the case for human review to clarify this point.",
+          "groundedness": 0.375,
+          "context_relevance": 0.625,
+          "faithfulness": 0.6042,
+          "hallucination_rate": 0.625,
+          "claim_count": 8,
+          "supported_claim_count": 3,
+          "claim_support_scores": [
+            0.3636,
+            0.9444,
+            0.8,
+            1.0,
+            0.4,
+            0.4545,
+            0.4167,
+            0.2
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q18",
+      "question": "What should happen when the policy schedule is missing?",
+      "retrieved_evidence": [
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 1 1. Preamble This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the ‘Company’) to the proposer mentioned in the Policy Schedule (hereinafter called the ‘Policyholder’) to cover the person(s) named i n the Policy Schedule (hereinafter called the ‘Insured Person(s)’). The Policy is based on the statements and declaration provided by the Policyholder in the Proposal Form as well as in any welcome or other tele - verification calls with the Company’s author ized person or based on any medical test conducted",
+          "page": 1,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.3333
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.3333
+        },
+        {
+          "text": "Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the meanings ascribed to them wherever they appear in this Policy and, where, the context so requires, references to the singular include references to the plural; references to the male includes the female and other gender and references to any statutory enactment includes subsequent changes to the same 3.1 Standard Definitions Def 1. Accident means sudden, unforeseen, and involuntary event caused by external, visible, and violent means. Def 2. Any one",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.3333
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "When the policy schedule is missing, the policyholder should contact the insurance company's customer service or claims department to request a replacement policy schedule or to obtain a new policy schedule from the policyholder.\n\nAccording to the policy wording, the policyholder is required to provide the policy schedule to the insurance company, as stated in clause 1 of the policy: \"The Policy is based on the statements and declaration provided by the Policyholder in the Proposal Form as well as in any welcome or other tele-verification calls with the Company's authorized person or based on any medical test conducted.\"\n\nIf the policy schedule is missing, the policyholder should contact the insurance company to request a replacement or obtain a new policy schedule, as this is a required document to activate the policy.",
+          "groundedness": 0.5,
+          "context_relevance": 0.3333,
+          "faithfulness": 0.6557,
+          "hallucination_rate": 0.5,
+          "claim_count": 2,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.3571,
+            0.6571
+          ]
+        },
+        "evidence_first": {
+          "answer": "The policy evidence does not provide a clear answer to what should happen when the policy schedule is missing. The policy wording only mentions the policy schedule as part of the policy, stating that it is a contract of insurance issued by the company to the policyholder and that it is based on the statements and declarations provided by the policyholder.\n\nHowever, there is no specific provision or clause that addresses what should happen when the policy schedule is missing. The operating clause only discusses the company's liability for medical expenses incurred during the policy period, but it does not provide guidance on what to do if the policy schedule is missing.\n\nTherefore, I recommend referring the case for human review to determine the next course of action.",
+          "groundedness": 0.4,
+          "context_relevance": 0.3333,
+          "faithfulness": 0.4286,
+          "hallucination_rate": 0.6,
+          "claim_count": 5,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.1429,
+            0.6923,
+            0.2222,
+            0.6875,
+            0.0
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q19",
+      "question": "Can a different insurance policy establish this policy's coverage?",
+      "retrieved_evidence": [
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long term impairment of the insured person’s health. Def 16. Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing",
+          "page": 4,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        },
+        {
+          "text": "due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases. Provided the insurers shall offer coverage during the grace period, if the pr emium is paid in instalments during the policy period (Note: In case of non-instalment premium payment, coverage shall not be available for the period for which no premium is received). Def 17. Hospital means any institution established for in -patient care and day care treatment ofIllness and/or injuries and which",
+          "page": 4,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.5
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "Based on the policy wording, it is unlikely that a different insurance policy can establish this policy's coverage. The policy explicitly states that coverage is only available during the grace period immediately following the premium due date, and that coverage need not be available during the period for which no premium is received.\n\nAdditionally, the policy defines \"Coverage\" as being available only during the specified policy period, and that the insurer may offer coverage during the grace period if the premium is paid in instalments.\n\nTherefore, it is unlikely that a different insurance policy can establish this policy's coverage, as the policy's terms and conditions are specific to this policy and do not provide for coverage to be transferred or established by another policy.",
+          "groundedness": 0.5,
+          "context_relevance": 0.5,
+          "faithfulness": 0.6897,
+          "hallucination_rate": 0.5,
+          "claim_count": 4,
+          "supported_claim_count": 2,
+          "claim_support_scores": [
+            0.4286,
+            0.8571,
+            0.7333,
+            0.3846
+          ]
+        },
+        "evidence_first": {
+          "answer": "Based on the provided policy evidence, it appears that this policy's coverage is specific to HDFC ERGO General Insurance Company Limited and is not explicitly stated to be transferable or endorsable to another insurance policy.\n\nThe policy wording does not mention anything about the coverage being transferable or endorsable to another policy. In fact, the Operating Clause states that any amount payable under the policy shall be subject to the terms of coverage, including exclusions, conditions, and definitions contained herein.\n\nTherefore, without further information or clarification, it is insufficient to determine whether a different insurance policy can establish this policy's coverage. I recommend retrieving the relevant policy wording or referring the case for human review to determine the specific terms and conditions of this policy.",
+          "groundedness": 0.2,
+          "context_relevance": 0.5,
+          "faithfulness": 0.5,
+          "hallucination_rate": 0.8,
+          "claim_count": 5,
+          "supported_claim_count": 1,
+          "claim_support_scores": [
+            0.4375,
+            0.2222,
+            0.9375,
+            0.3333,
+            0.3333
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "Q20",
+      "question": "What should the system do when evidence is insufficient?",
+      "retrieved_evidence": [
+        {
+          "text": "of any of the following: i. Central or State Government AYUSH Hospital; or ii. Teaching hospital attached to AYUSH College recognized by the Central Government /Central Council of Indian Medicine/ Central Council for Homeopathy; or iii. AYUSH Hospital, standalone or co-located with in-patient healthcare facility of any recognized system of medicine, registered with the local authorities, wherever applicable, and is under the supervision of a qualified registered AYUSH Medical Practitioner and must comply with all the following criterion: a. Having at least 5 in-patient beds. b. Having qualified AYUSH Medical Practitioner in charge round the clock; c. Having dedicated AYUSH therapy sections as required and I or has equipped operation theatre where surgical procedures are to be carried out; d. Maintaining daily records of the patients and making them accessible to the insurance company's authorized representative. Def 5. AYUSH Day",
+          "page": 2,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.3333
+        },
+        {
+          "text": "of all types 13. Hydrocele 14. Non-Infective Arthritis 15. Piles, Fissures and Fistula in anus 16. Pilonidal sinus, Sinusitis and related disorders 17. Prolapse inter Vertebral Disc and Spinal Diseases unless arising from accident. 18. Calculi in urinary system, Gall Bladder and Bile duct, excluding malignancy.",
+          "page": 12,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.3333
+        },
+        {
+          "text": "can also lodge an online complaint through the website of Council for Insurance Ombudsmen (CIO) www.cioins.co.in Dedicated Helpline For Email ID Contact Number Senior Citizen seniorcitizen@hdfcergo.com 022 6158 2026 Women - 022 6158 2055 You may also refer the Grievance Redressal Escalation matrix on our website https://www.hdfcergo.com/customer-voice/grievances If Insured Person is not satisfied with the redressal of grievance through above methods, the Insured Person may also approach the office of Insurance Ombudsman of the respective area/region for redressal of grievance as per Insurance Ombudsman Rules 2017. Grievance may also be lodged at IRDAI In tegrated Grievance Management System - https://bimabharosa.irdai.gov.in 17. Nomination The policy holder is required at the inception of the policy to make a nomination for the purpose of payment of claims under the policy in the event of death of the policy holder. Any change of nomination",
+          "page": 20,
+          "source": "equicover-health-cis-pw.pdf",
+          "retrieval_score": 0.3333
+        }
+      ],
+      "variants": {
+        "baseline": {
+          "answer": "When evidence is insufficient, the system should:\n\n1. Request additional information or documentation from the insured person to support their claim.\n2. Provide clear guidelines on what specific information is required to support the claim.\n3. Specify the timeframe within which the additional information must be submitted.\n4. Consider alternative evidence, such as medical records or expert opinions, if the primary evidence is insufficient.\n\nThis approach ensures that the system is fair, transparent, and compliant with the policy's requirements, while also allowing the insured person to provide additional information to support their claim.",
+          "groundedness": 0.0,
+          "context_relevance": 0.3333,
+          "faithfulness": 0.2075,
+          "hallucination_rate": 1.0,
+          "claim_count": 9,
+          "supported_claim_count": 0,
+          "claim_support_scores": [
+            0.3333,
+            0.25,
+            0.0,
+            0.125,
+            0.0,
+            0.0,
+            0.0,
+            0.2727,
+            0.25
+          ]
+        },
+        "evidence_first": {
+          "answer": "When evidence is insufficient, the system should recommend retrieving the relevant policy wording or referring the case for human review. This is stated in the policy evidence on page 2, which states that if the evidence is insufficient, the system should refer to the policy wording for further clarification.",
+          "groundedness": 0.0,
+          "context_relevance": 0.3333,
+          "faithfulness": 0.2174,
+          "hallucination_rate": 1.0,
+          "claim_count": 2,
+          "supported_claim_count": 0,
+          "claim_support_scores": [
+            0.0909,
+            0.3636
+          ]
+        }
+      }
+    }
+  ]
+}

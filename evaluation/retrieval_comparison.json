@@ -1,0 +1,1361 @@
+{
+  "report_type": "heuristic_retrieval_comparison",
+  "input_file": "evaluation\\real_llmops_results.json",
+  "question_count": 20,
+  "policy_passage_count": 231,
+  "top_k": 3,
+  "aggregate_metrics": {
+    "baseline_mean_top_k_score": 0.5599,
+    "improved_mean_top_k_score": 0.6338,
+    "score_change": 0.0738,
+    "mean_top_k_overlap": 0.725
+  },
+  "limitations": [
+    "Scores are lexical heuristics, not semantic relevance judgments.",
+    "A higher score does not prove that a passage answers the question.",
+    "Review the returned passages and policy page numbers manually.",
+    "This script does not modify the application retrieval pipeline."
+  ],
+  "results": [
+    {
+      "question_id": "Q01",
+      "question": "What waiting period applies to cataract treatment?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases. Provided the insurers shall offer coverage du",
+          "retrieval_score": 0.6
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 6,
+          "text": "a nd consistent with the prevailing charges in the geographical area for identical or similar services, taking into account the nature of illness/ injury involved. Def 41. Renewal means the terms on which the contract of insurance can be renewed on mutual consent with a provision of grace period for treating the renewal continuous for the purpose of gaining credit for pre-existing diseases, time-bound exclusions and for all waiting periods. Def 42. Room Rent means the amount charged by a Hospita",
+          "retrieval_score": 0.6
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. i",
+          "retrieval_score": 0.6
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 25,
+          "text": "of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured per day. Cataract Treatment Up Rs.40,000/ per each eye in one policy year. Modern Treatment Covered for listed procedures up to 50% of sum insured available for Inpatient Hospitalisation Care Emergency Ground Ambulance Expenses covered up to Rs. 2000 per hospitalisation AYUSH Expenses incurred for Inpatient Care treatment under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines shall be covered up to 100% of suminsured, during each Policy year as specified in the policy schedule Pre-Existing Disease Only PEDs declared in the Proposal Form and accepted for coverage by the company shall be covered. Initial Waiting period 30 days for all claims except resulting from Accident PED waiting period 36 months ( For pre existing",
+          "score": 0.714286
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 25,
+          "text": "of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured per day. Cataract Treatment Up Rs.40,000/ per each eye in one policy year. Modern Treatment Covered for listed procedures up to 50% of sum insured available for Inpatient Hospitalisation Care Emergency Ground Ambulance Expenses covered up to Rs. 2000 per hospitalisation AYUSH Expenses incurred for Inpatient Care treatment under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines shall be covered up to 100% of suminsured, during each Policy year as specified in the policy schedule Pre-Existing Disease Only PEDs declared in the Proposal Form and accepted for coverage by the company shall be covered. Initial Waiting period 30 days for all claims except resulting from Accident PED waiting period 36 months ( For pre existing",
+          "score": 0.714286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.571429
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 25,
+          "text": "of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured per day. Cataract Treatment Up Rs.40,000/ per each eye in one policy year. Modern Treatment Covered for listed procedures up to 50% of sum insured available for Inpatient Hospitalisation Care Emergency Ground Ambulance Expenses covered up to Rs. 2000 per hospitalisation AYUSH Expenses incurred for Inpatient Care treatment under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines shall be covered up to 100% of suminsured, during each Policy year as specified in the policy schedule Pre-Existing Disease Only PEDs declared in the Proposal Form and accepted for coverage by the company shall be covered. Initial Waiting period 30 days for all claims except resulting from Accident PED waiting period 36 months ( For pre existing",
+          "score": 0.844286
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 25,
+          "text": "of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges all-inclusive as provided by the Hospital / Nursing Home up to 2% of the sum insured per day. Cataract Treatment Up Rs.40,000/ per each eye in one policy year. Modern Treatment Covered for listed procedures up to 50% of sum insured available for Inpatient Hospitalisation Care Emergency Ground Ambulance Expenses covered up to Rs. 2000 per hospitalisation AYUSH Expenses incurred for Inpatient Care treatment under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems of medicines shall be covered up to 100% of suminsured, during each Policy year as specified in the policy schedule Pre-Existing Disease Only PEDs declared in the Proposal Form and accepted for coverage by the company shall be covered. Initial Waiting period 30 days for all claims except resulting from Accident PED waiting period 36 months ( For pre existing",
+          "score": 0.844286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 12,
+          "text": "date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident. 2. In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. 3. If any of the specified disease/procedure falls under the waiting period specified for pre - Existing diseases, then the longer of the two waiting periods shall apply. 4. The waiting period for listed conditions shall apply even if contracted after the policy or declared and accepted without a specific exclusion. 5. If the Insured Person is continuously covered without an y break as defined under the applicable norms on portability stipulated by IRDAI, then waiting period for the same would be reduced to the extent of prior coverage. 24 Months waiting period. 1. Benign ENT disorders 2. Tonsillectomy 3. Adenoidectomy 4. Mastoidectomy 5. Tympanoplasty 6. Hysterectomy 7. All internal and external benign tumors, cysts, polyps of any kind, including benign breast lumps. 8. Benign prostate hypertrophy 9. Cataract and age-related eye ailments 10. Gastric/ Duodenal Ulcer 11.",
+          "score": 0.681429
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.6667,
+      "improved_average_score": 0.79
+    },
+    {
+      "question_id": "Q02",
+      "question": "What waiting period applies to a pre-existing disability?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existin",
+          "retrieval_score": 0.8333
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 13 19. Varicose Veins and Varicose Ulcers 6 Specific Conditions Applicable for Persons with Disability The Company will indemnify reasonable and custo",
+          "retrieval_score": 0.8333
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "for the pre-existing disability covered, will have a waiting period of 24 months from the first policy inception date. ii. Any reconstructive / Cosmetic / prosthesis / external or internal device implanted/ used at home for the purpose of treatment of existing disability or used for activities of daily living are/is excluded from the policy 7 Specific Conditions Applicable for Persons with HIV - AIDS The Company will indemnify the Reasonable and Customary Charges for any Medical Condition which ",
+          "retrieval_score": 0.8333
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 5 Waiting Period The Company is not liable to make any payment under the Policy in connection with or in respect of the following expenses till th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with",
+          "score": 0.777778
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with insurer. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations, then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of number of months (as mentioned in Policy Schedule) for any pre -existing disease is subject to the same being declared at the time of application and accepted by Us 2. First 30 days waiting period- Code- Excl03 a) Expenses related to th e treatment of any illness within 30 days from the first policy",
+          "score": 0.777778
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 13 19. Varicose Veins and Varicose Ulcers 6 Specific Conditions Applicable for Persons with Disability The Company will indemnify reasonable and customary charges for medical expenses incurred towards Inpatient Hospitalisation arising due to the pre-existing disability covered, or condition as listed under The Rights of Persons With Disabilities Act, 2016 subject to the terms and limits mentioned below. i. Any treatment for the pre-existing disability covered, will have a waiting period of 24 months from the first policy inception date. ii. Any reconstructive / Cosmetic / prosthesis / external or internal device implanted/ used at home for the purpose of treatment of existing disability or used for activities of daily living are/is excluded from the policy 7 Specific Conditions Applicable for Persons with HIV - AIDS The Company will indemnify the",
+          "score": 0.777778
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 5 Waiting Period The Company is not liable to make any payment under the Policy in connection with or in respect of the following expenses till th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with",
+          "score": 0.937778
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 11,
+          "text": "f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 5 Waiting Period The Company is not liable to make any payment under the Policy in connection with or in respect of the following expenses till th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with",
+          "score": 0.937778
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with insurer. b) In case of enhancement of sum insured the exclusion shall apply afresh to the extent of sum insured increase. c) If the Insured Person is continuously covered without any break as defined under the portability norms of the extant IRDAI (Health Insurance) Regulations, then waiting period for the same would be reduced to the extent of prior coverage. d) Coverage under the policy after the expiry of number of months (as mentioned in Policy Schedule) for any pre -existing disease is subject to the same being declared at the time of application and accepted by Us 2. First 30 days waiting period- Code- Excl03 a) Expenses related to th e treatment of any illness within 30 days from the first policy",
+          "score": 0.917778
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.7778,
+      "improved_average_score": 0.9311
+    },
+    {
+      "question_id": "Q03",
+      "question": "What co-payment applies under the policy?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure, or position. i. Internal Congenital Anomaly- Congenital Anomaly which is not in the visible and accessible parts of the body. ii. External Congenital Anomaly- Congenital Anomaly which is in the visible and accessible parts of the body D",
+          "retrieval_score": 0.6667
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 20,
+          "text": "can also lodge an online complaint through the website of Council for Insurance Ombudsmen (CIO) www.cioins.co.in Dedicated Helpline For Email ID Contact Number Senior Citizen seniorcitizen@hdfcergo.com 022 6158 2026 Women - 022 6158 2055 You may also refer the Grievance Redressal Escalation matrix on our website https://www.hdfcergo.com/customer-voice/grievances If Insured Person is not satisfied with the redressal of grievance through above methods, the Insured Person may also approach the offi",
+          "retrieval_score": 0.6667
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 24,
+          "text": "c. Copy of Hospital summary/Discharge card/treatment advise / medical reference d. Copy of Medical reports/records e. Copy of Investigation reports f. Medical Practitioner's certificate g. .Any other relevant document as requested by the Insurer_ h. On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment of benefit as per the ",
+          "retrieval_score": 0.6667
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in accordance with the policy terms and conditions, are directly made to the Network Provider by the insurer to the extent pre-authorization is approved. Def 8. Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure, or position. i. Internal Congenital Anomaly- Congenital Anomaly which is not in the visible and accessible parts of the body. ii. External Congenital Anomaly- Congenital Anomaly which is in the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims",
+          "score": 0.714286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims amount. A co-payment does not reduce the Sum Insured. Def 11. Day Care Centre means any institution established for day care treatment of illness and/or injuries or a medical setup with a hospital and which has been registered with the local authorities, wherever applicable, and is under supervision of a re gistered and qualified medical practitioner and must comply with all minimum criterion as under: a. has qualified nursing staff under its employment. b. has qualified medical practitioner/s in charge. c. has fully equipped operation theatre of its own where surgica l procedures are carried out maintains daily records of patients and will make these accessible to the insurance company's authorized personnel Def 12. Day Care Treatment means medical treatment, and/or surgical procedure which is i. Undertaken under General or Local Anesthesia in a hospital/day care center in less than 24 hours because of technological",
+          "score": 0.714286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 24,
+          "text": "On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment of benefit as per the contract. In case if the claim is repudiated Insurer will inform the Insured about the same in writing with reason for repudiation 10.4 Co-payment Each and every claim under the Policy shall be subject to a Co-payment of 20% applicable to claim amount admissible and payable as per the terms and conditions of the Policy. The amount payable shall be after deduction of the co-payment. This co-payment can be waived off by paying an additional premium(optional). 10.5 Services Offered by TPA Servicing of claims, i.e., claim admissions and assessments, under this Policy by way of preauthorization of cashless treatment or processing of claims other than cashless claims or both, as per the underlying terms and conditions of the policy. The services offered by a TPA shall not include: i. Claim settlement and claim rejection. ii. Any services directly to any",
+          "score": 0.714286
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in accordance with the policy terms and conditions, are directly made to the Network Provider by the insurer to the extent pre-authorization is approved. Def 8. Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure, or position. i. Internal Congenital Anomaly- Congenital Anomaly which is not in the visible and accessible parts of the body. ii. External Congenital Anomaly- Congenital Anomaly which is in the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims",
+          "score": 0.884286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 24,
+          "text": "On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment of benefit as per the contract. In case if the claim is repudiated Insurer will inform the Insured about the same in writing with reason for repudiation 10.4 Co-payment Each and every claim under the Policy shall be subject to a Co-payment of 20% applicable to claim amount admissible and payable as per the terms and conditions of the Policy. The amount payable shall be after deduction of the co-payment. This co-payment can be waived off by paying an additional premium(optional). 10.5 Services Offered by TPA Servicing of claims, i.e., claim admissions and assessments, under this Policy by way of preauthorization of cashless treatment or processing of claims other than cashless claims or both, as per the underlying terms and conditions of the policy. The services offered by a TPA shall not include: i. Claim settlement and claim rejection. ii. Any services directly to any",
+          "score": 0.884286
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 3,
+          "text": "for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in accordance with the policy terms and conditions, are directly made to the Network Provider by the insurer to the extent pre-authorization is approved. Def 8. Condition Precedent means a policy term or condition upon which the Insurer's liability under the policy is conditional upon. Def 9. Congenital Anomaly refers to a condition(s) which is present since birth, and which is abnormal with reference to form, structure, or position. i. Internal Congenital Anomaly- Congenital Anomaly which is not in the visible and accessible parts of the body. ii. External Congenital Anomaly- Congenital Anomaly which is in the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims",
+          "score": 0.884286
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.7143,
+      "improved_average_score": 0.8843
+    },
+    {
+      "question_id": "Q04",
+      "question": "Are cataract expenses subject to sub-limits?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. i",
+          "retrieval_score": 1.0
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. i",
+          "retrieval_score": 1.0
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.8
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.857143
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.857143
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.714286
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.927143
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.927143
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.754286
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.8095,
+      "improved_average_score": 0.8695
+    },
+    {
+      "question_id": "Q05",
+      "question": "What is the exact monetary cataract sub-limit?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. i",
+          "retrieval_score": 0.6
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. i",
+          "retrieval_score": 0.6
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of ",
+          "retrieval_score": 0.4
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.5
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.5
+        },
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 4,
+          "text": "than incorrect episodic entries. Specifically, the semantic rule ⟨heavy object×push,block,0.30⟩incorrectly flagged a safe command to push a sturdy wooden chair, because the consolidation process generalized from episodes involving fragile heavy objects (e.g., ceramic pots) to all heavy objects. Episodic memory entries, by contrast, did not directly cause false positives because their retrieval threshold (δep = 0.8) requires high similarity to a specific past violation, making spurious matches unlikely. To reduce false positives, we identify two refinement strategies for future work: •Negative feedback loop:When a blocked command is overridden by a human operator (indicating a false positive), the system records this as anegative examplefor the triggering rule, lowering its confidenceθor narrowing its pattern scope. After sufficient negative examples, an overly broad rule can be split into more specific sub-rules. •Confidence decay:Semantic rules that have not been reinforced by new episodic entries over a sustained period have theirθgradually reduced, preventing stale or overgeneralized rules from persisting indefinitely. These mechanisms were not implemented in our current preliminary system but represent important directions for improving precision without sacrificing safety coverage. A.3 DISCUSSION: WHYMEMORYWORKS Episodic",
+          "score": 0.375
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.6
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "maximum of 1% of the Sum Insured per day. ii. Intensive Care Unit (ICU) / Intensive Cardiac Care Unit (ICCU) expenses up maximum of 2% of Sum Insured per day. iii. Surgeon, Anesthetist, Medical Practitioner, Consultants, Specialist Fees whether paid directly to the treating Medical Practitioner/ surgeon or to the hospital iv. Anaesthesia, blood, oxygen, operation theatre charges, surgical appliances, medicines and drugs, costs towards diagnostics, diagnostic imaging modalities and such similar other expenses. Other expenses i. Expenses incurred on treatment of cataract subject to the sub limits. ii. Dental treatment necessitated due to disease or injury (for inpatient care only). iii. Plastic surgery necessitated due to disease or injury. iv. All day care treatments Note: 1. Expenses of Hospitalization for a minimum period of 24 consec utive hours only shall be admissible. However, the time limit shall not apply in respect of Day Care Treatment 2. The above-mentioned Medical Expenses shall be payable only after the first commencement of the Policy with the Company 4.2 AYUSH Treatment",
+          "score": 0.6
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 11 The company shall indemnify medical expe nses incurred for treatment of Cataract, subject to a limit of Rs.40,000/-, per each eye in one policy year. 4.7 Modern Treatment: The following procedures will be covered (wherever medically indicated) either as In patient or as part of Day Care Treatment in a Hospital up to 50% of Sum Insured, specified in the Policy Schedule, during the Policy Period. a. Uterine Artery Embolization and HIFU (High intensity focused ultrasound) b. Balloon Sinuplasty c. Deep Brain stimulation d. Oral chemotherapy e. lmmunotherapy- Monoclonal Antibody to be given as injection. f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell",
+          "score": 0.455
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.4583,
+      "improved_average_score": 0.5517
+    },
+    {
+      "question_id": "Q06",
+      "question": "Does the policy guarantee approval of every pre-authorisation request?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting ",
+          "retrieval_score": 0.4
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 22,
+          "text": "The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting ",
+          "retrieval_score": 0.4
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "them accessible to the insurance company's authorized representative. Def 6. Break in Policy means the period of gap that occurs at the end of the existing policy term/installment premium due date, when the premium due for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in ac",
+          "retrieval_score": 0.2
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "expiry,and revision will be applicable only from the date of next renewal. Credit of continuity/waiting periods for all the previous policy years would be extended in the new policy on Renewal with Us. c. Terms and conditions of the Policy The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "score": 0.5
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 22,
+          "text": "expiry,and revision will be applicable only from the date of next renewal. Credit of continuity/waiting periods for all the previous policy years would be extended in the new policy on Renewal with Us. c. Terms and conditions of the Policy The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "score": 0.5
+        },
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 4,
+          "text": "theirθgradually reduced, preventing stale or overgeneralized rules from persisting indefinitely. These mechanisms were not implemented in our current preliminary system but represent important directions for improving precision without sacrificing safety coverage. A.3 DISCUSSION: WHYMEMORYWORKS Episodic memory enables single-shot learning of safety violations—one incident teaches the system to avoid all similar future commands. Unlike static rules requiring exhaustive manual enumeration of hazards, our memory-based approach scales naturally: each new violation immediately updates the safety knowledge base. Consolidation further enhances scalability by extracting recurring patterns (e.g., “fragile×push”) from specific cases (“push vase,” “push bowl”), enabling generalization to novel objects (“push ceramic cup”) without additional violations. This aligns with cognitive science findings that episodic memory supports flexible reasoning in novel contexts (Lampinen et al., 2025). Our approach differs from formal verification methods (Yang et al., 2024) which require pre- specified LTL formulas. While formal methods guarantee safety for known constraints, they cannot handle emergent hazards in open environments. Our episodic memory learns constraints from expe- rience, making it adaptive to novel risks. Recent work on LLM agent memory (Wu & Shu, 2025; Xu",
+          "score": 0.4
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "expiry,and revision will be applicable only from the date of next renewal. Credit of continuity/waiting periods for all the previous policy years would be extended in the new policy on Renewal with Us. c. Terms and conditions of the Policy The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "score": 0.55
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 22,
+          "text": "expiry,and revision will be applicable only from the date of next renewal. Credit of continuity/waiting periods for all the previous policy years would be extended in the new policy on Renewal with Us. c. Terms and conditions of the Policy The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "score": 0.55
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 19,
+          "text": "be charged If the installment premium is not paid on due date. v. In case of installment premium due not received within the grace Per iod, the Policy will get cancelled. 12. Moratorium Period After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud. This period of sixty continuous months is called as moratorium period. The moratorium would be applicable for the sums insured of the first policy. Wherever, the sum insured is enhanced, com pletion of sixty continuous months would be applicable from the date of enhancement of sums insured only on the enhanced limits. 13. Possibility of Revision of terms of the Policy including the Premium Rates The Company, with prior approval of IRDAI, may revi se or modify the terms of the policy including the premium rates. The insured Person shall be notified three (3) months before the changes are affected. 14. Free Look Period The Free Look Period shall",
+          "score": 0.47
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.4667,
+      "improved_average_score": 0.5233
+    },
+    {
+      "question_id": "Q07",
+      "question": "What documents may be needed for pre-authorisation?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to deny pre-authorization in case the insured person is unable to provide the relevant medical details, vi. In case of denial of cashless access, the insured person may obtain the treatment as per treating doctor's advice and submit the claim documents to the Company I TPA for reimbursement.",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 22,
+          "text": "At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to deny pre-authorization in case the insured person is unable to provide the relevant medical details, vi. In case of denial of cashless access, the insured person may obtain the treatment as per treating doctor's advice and submit the claim documents to the Company I TPA for reimbursement.",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "them accessible to the insurance company's authorized representative. Def 6. Break in Policy means the period of gap that occurs at the end of the existing policy term/installment premium due date, when the premium due for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to the insured where the payments, of the costs of treatment undergone by the insured in ac",
+          "retrieval_score": 0.25
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 5,
+          "text": "Published as a conference paper at ICLR 2026 A.4 DETAILEDLIMITATIONS ANDFUTUREWORK Cold Start Problem.Initial deployment requires seed violations. We use 10 synthetic examples generated via LLM (OpenAI et al., 2024) simulation of common robotic hazards (e.g., “push frag- ile object,” “navigate near human,” “grasp sharp edge”). In practice, a few real violations during supervised deployment would suffice to bootstrap the system. Memory Capacity Management.We cap episodic storage at 100 entries to prevent unbounded growth. Older, infrequent violations are archived but can be retrieved if needed. Consolidation mitigates this limitation by compressing frequent patterns into semantic rules, which have no cap. Retrieval Latency.Current implementation averages 200ms per command: 150ms for CLIP (Rad- ford et al., 2021) encoding and 50ms for similarity computation. This is acceptable for navigation tasks but may require optimization for high-frequency manipulation control. Potential improvements include pre-computing command embeddings or using approximate nearest neighbor search. Future Directions.(1)Multi-agent memory sharing: Multiple robots contribute to a shared safety memory, enabling fleet-wide learning from individual violations. (2)Hierarchical consolidation: Extend beyond episodic→semantic to include procedural memory for routine safety checks. (3) Active",
+          "score": 0.625
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "expiry,and revision will be applicable only from the date of next renewal. Credit of continuity/waiting periods for all the previous policy years would be extended in the new policy on Renewal with Us. c. Terms and conditions of the Policy The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to deny pre-authorization in case the insured person is unable to provide the relevant medical details, vi. In case of denial of cashless access, the insured person may obtain the treatment as per treating doctor's advice and submit the claim documents to the Company I TPA for reimbursement.",
+          "score": 0.5
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 5,
+          "text": "Published as a conference paper at ICLR 2026 A.4 DETAILEDLIMITATIONS ANDFUTUREWORK Cold Start Problem.Initial deployment requires seed violations. We use 10 synthetic examples generated via LLM (OpenAI et al., 2024) simulation of common robotic hazards (e.g., “push frag- ile object,” “navigate near human,” “grasp sharp edge”). In practice, a few real violations during supervised deployment would suffice to bootstrap the system. Memory Capacity Management.We cap episodic storage at 100 entries to prevent unbounded growth. Older, infrequent violations are archived but can be retrieved if needed. Consolidation mitigates this limitation by compressing frequent patterns into semantic rules, which have no cap. Retrieval Latency.Current implementation averages 200ms per command: 150ms for CLIP (Rad- ford et al., 2021) encoding and 50ms for similarity computation. This is acceptable for navigation tasks but may require optimization for high-frequency manipulation control. Potential improvements include pre-computing command embeddings or using approximate nearest neighbor search. Future Directions.(1)Multi-agent memory sharing: Multiple robots contribute to a shared safety memory, enabling fleet-wide learning from individual violations. (2)Hierarchical consolidation: Extend beyond episodic→semantic to include procedural memory for routine safety checks. (3) Active",
+          "score": 0.625
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "expiry,and revision will be applicable only from the date of next renewal. Credit of continuity/waiting periods for all the previous policy years would be extended in the new policy on Renewal with Us. c. Terms and conditions of the Policy The terms and conditions contained herein and in the Policy Schedule be deemed to form part of the Policy and shall be read together as one document. 10 Claim Procedure 10.1 Procedure for Cashless claims: i. Treatment may be taken in a network provider and is subject to preauthorizati on by the Company or its authorized TPA, ii. Cashless request form available with the network provider and TPA shall be completed and sent to the Company / TPA for authorization. iii. The Company/ TPA upon getting cashless request form and related medical information from the insured person/ network provider will issue pre -authorization letter to the hospital after verification. iv. At the time of discharge, the insured person has to verify and sign the discharge papers, pay for non-medical and inadmissible expenses. v. The Company/ TPA reserves the right to",
+          "score": 0.52
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 24,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 24 Company 3. Any delay in notification or submission may be condoned on merit where delay is proved to be for reasons beyond the control of the Insured Person 4. In case of payment for HIV/AIDS, Insured will need to submit the below mentioned documents for the processing of Claim: a. Identity proof of the claimant b. Dully filled Claim form c. Copy of Hospital summary/Discharge card/treatment advise / medical reference d. Copy of Medical reports/records e. Copy of Investigation reports f. Medical Practitioner's certificate g. .Any other relevant document as requested by the Insurer_ h. On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment",
+          "score": 0.52
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.5417,
+      "improved_average_score": 0.555
+    },
+    {
+      "question_id": "Q08",
+      "question": "What should happen when submitted documents are insufficient?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the ",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "xiii. Legal heir/succession certificate, wherever applicable xiv. Any other relevant document required by Company/TPA for assessment of the claim. 1. The company shall only accept bills/invoices/medical treatment related documents only in the Insured Person's name for whom the claim is submitted. 2. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Comp any shall accept the copy of the documents and claim settlement advice,",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 23,
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the ",
+          "retrieval_score": 0.5
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 3 AYUSH Medical Practitioner(s) on day care basis without in-patient services and must comply with all the following criterion: a. Having qualified registered AYUSH Medical Practitioner in charge round the clock; b. Having dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out; c. Maintaining daily records of the patients and making them accessible to the insurance company's authorized representative. Def 6. Break in Policy means the period of gap that occurs at the end of the existing policy term/installment premium due date, when the premium due for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to",
+          "score": 0.25
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not include: i. Cost of pharmacy and consumables. ii. Cost of implants and medical devices iii. Cost of diagnostics Def 6. Alternative /AYUSH Treatment refers to hospitalization treatments given under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. Def 7. Biological Attack or Weapons means thee mission, discharge, dispersal, release or escape of any pathogenic (disease producing) micro-organisms and/or biologically produced toxins (including genetically modified organisms and chemically synthesized toxins) which are capable of causing any Illness, incapacitating disablement or death. Def 8. Chemical attack or weapons means the emission, discharge, dispersal, release or escape of any solid, liquid or gaseous chemical compound which ,when suitably distributed, is capable of causing any lllness, incapacitating disablement or death. Def 9. Claims means a demand made by the Policyholder/Insured Person or on his behalf, for payment of Medical Expenses under any other Benefit,",
+          "score": 0.25
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "treatment. This also includes: i. Custodial care either at home or in a nursing facility for personal care such as help with activities of daily living such as bathing, dressing, moving around either by skilled nurses or assistant or non-skilled persons. ii. Any services for people who are terminally ill to address physical, social, emotional and spiritual needs. 3. Obesity/Weight control: Code – Excl06: Expenses related to the surgical treatment of obesity that does not fulfi l all the below conditions: i. Surgery to be conducted is upon the advice of the Doctor ii. The surgery/Procedure conducted should be supported by clinical protocols iii. The member has to be 18 years of age or older and iv. Body Mass Index (BMI) A. greater than or equal to 40 or B. greater than or equal to 35 in conjunction with any of the following severe co -",
+          "score": 0.25
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 3 AYUSH Medical Practitioner(s) on day care basis without in-patient services and must comply with all the following criterion: a. Having qualified registered AYUSH Medical Practitioner in charge round the clock; b. Having dedicated AYUSH therapy sections as required and/or has equipped operation theatre where surgical procedures are to be carried out; c. Maintaining daily records of the patients and making them accessible to the insurance company's authorized representative. Def 6. Break in Policy means the period of gap that occurs at the end of the existing policy term/installment premium due date, when the premium due for renewal on a given policy or installment premium due is not paid on or before the premium renewal date or grace period. Def 7. Cashless Facility means a facility extended by the insurer to",
+          "score": 0.25
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not include: i. Cost of pharmacy and consumables. ii. Cost of implants and medical devices iii. Cost of diagnostics Def 6. Alternative /AYUSH Treatment refers to hospitalization treatments given under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. Def 7. Biological Attack or Weapons means thee mission, discharge, dispersal, release or escape of any pathogenic (disease producing) micro-organisms and/or biologically produced toxins (including genetically modified organisms and chemically synthesized toxins) which are capable of causing any Illness, incapacitating disablement or death. Def 8. Chemical attack or weapons means the emission, discharge, dispersal, release or escape of any solid, liquid or gaseous chemical compound which ,when suitably distributed, is capable of causing any lllness, incapacitating disablement or death. Def 9. Claims means a demand made by the Policyholder/Insured Person or on his behalf, for payment of Medical Expenses under any other Benefit,",
+          "score": 0.25
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "treatment. This also includes: i. Custodial care either at home or in a nursing facility for personal care such as help with activities of daily living such as bathing, dressing, moving around either by skilled nurses or assistant or non-skilled persons. ii. Any services for people who are terminally ill to address physical, social, emotional and spiritual needs. 3. Obesity/Weight control: Code – Excl06: Expenses related to the surgical treatment of obesity that does not fulfi l all the below conditions: i. Surgery to be conducted is upon the advice of the Doctor ii. The surgery/Procedure conducted should be supported by clinical protocols iii. The member has to be 18 years of age or older and iv. Body Mass Index (BMI) A. greater than or equal to 40 or B. greater than or equal to 35 in conjunction with any of the following severe co -",
+          "score": 0.25
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.25,
+      "improved_average_score": 0.25
+    },
+    {
+      "question_id": "Q09",
+      "question": "What should happen if policy wording is unclear?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 12,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 12 commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, ",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 17 6. Fraud If any claim made by the Insured Person, is in any respect fraudulent, or if any false statement, or declaration is made or used in suppor",
+          "retrieval_score": 0.5
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 12,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 12 commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Cover age for more than twelve months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently. 3. Specified disease/procedure waiting period- Code- Excl02 1. Expenses related to the tr eatment of the listed Conditions; surgeries/treatments shall be excluded until the expiry of 24monthsas (mentioned in Policy Schedule)of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident. 2. In case of enhancement of sum insured the exclusion shall apply afresh",
+          "score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 17 6. Fraud If any claim made by the Insured Person, is in any respect fraudulent, or if any false statement, or declaration is made or used in support thereof, or if any fraudulent means or devices are used by the Insured Person or anyone acting on his/her behalf to obtain any benefit under this Policy, all benefits under this policy and the premium paid shall be forfeited. Any amount already paid against claims made under this Policy but which are found fraudulent later shall be repaid by all recipient(s)/Policyholder(s), who have made that particular claim, who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by",
+          "score": 0.5
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.55
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 12,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 12 commencement date shall be excluded except claims arising due to an accident, provided the same are covered. b) This exclusion shall not, however, apply if the Insured Person has Continuous Cover age for more than twelve months. c) The within referred waiting period is made applicable to the enhanced sum insured in the event of granting higher sum insured subsequently. 3. Specified disease/procedure waiting period- Code- Excl02 1. Expenses related to the tr eatment of the listed Conditions; surgeries/treatments shall be excluded until the expiry of 24monthsas (mentioned in Policy Schedule)of continuous coverage after the date of inception of the first policy with us. This exclusion shall not be applicable for claims arising due to an accident. 2. In case of enhancement of sum insured the exclusion shall apply afresh",
+          "score": 0.55
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 17 6. Fraud If any claim made by the Insured Person, is in any respect fraudulent, or if any false statement, or declaration is made or used in support thereof, or if any fraudulent means or devices are used by the Insured Person or anyone acting on his/her behalf to obtain any benefit under this Policy, all benefits under this policy and the premium paid shall be forfeited. Any amount already paid against claims made under this Policy but which are found fraudulent later shall be repaid by all recipient(s)/Policyholder(s), who have made that particular claim, who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by",
+          "score": 0.55
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.5,
+      "improved_average_score": 0.55
+    },
+    {
+      "question_id": "Q10",
+      "question": "Does completing a waiting period guarantee that a claim is payable?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "Policy Schedule, during the Policy Period. a. Uterine Artery Embolization and HIFU (High intensity focused ultrasound) b. Balloon Sinuplasty c. Deep Brain stimulation d. Oral chemotherapy e. lmmunotherapy- Monoclonal Antibody to be given as injection. f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell ",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existin",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 19,
+          "text": "period for which no premium is received). iii. TheBenefits provided under- \"Waiting Periods\", \"Specific Waiting Periods\" Sections shall continue in the event of payment of premium within the stipulated grace Period. iv. No interest will be charged If the installment premium is not paid on due date. v. In case of installment premium due not received within the grace Per iod, the Policy will get cancelled. 12. Moratorium Period After completion of sixty continuous months of coverage (including por",
+          "retrieval_score": 0.5
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 5,
+          "text": "must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity; iii) must have been prescribed by a medical practitioner; iv) must conform to the professional standards widely accepted in international medical practice or by the medical community in India. Def 29. Migration means a facility provided to policyholders (including all members under family cover and group policies), to transfer the credits gained for pre -existing diseases and specific waiting periods from one health insurance policy to another with the same insurer. Def 30. Network Provider means hospitals or health care providers enlisted by an insurer, TPA or jointly by an Insurer and TPA to provide medical services to an insured by a cashless facility. Def 31. New born Baby means baby born during the Policy Period and is aged up to 90 days. Def 32. Non-Network Provider means any hospital, day care centre or other provider that is not part of the network. Def 33. Notification of Claim means the process of intimating a claim to the insurer or",
+          "score": 0.6
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 5,
+          "text": "must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity; iii) must have been prescribed by a medical practitioner; iv) must conform to the professional standards widely accepted in international medical practice or by the medical community in India. Def 29. Migration means a facility provided to policyholders (including all members under family cover and group policies), to transfer the credits gained for pre -existing diseases and specific waiting periods from one health insurance policy to another with the same insurer. Def 30. Network Provider means hospitals or health care providers enlisted by an insurer, TPA or jointly by an Insurer and TPA to provide medical services to an insured by a cashless facility. Def 31. New born Baby means baby born during the Policy Period and is aged up to 90 days. Def 32. Non-Network Provider means any hospital, day care centre or other provider that is not part of the network. Def 33. Notification of Claim means the process of intimating a claim to the insurer or",
+          "score": 0.6
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.5
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 5,
+          "text": "must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity; iii) must have been prescribed by a medical practitioner; iv) must conform to the professional standards widely accepted in international medical practice or by the medical community in India. Def 29. Migration means a facility provided to policyholders (including all members under family cover and group policies), to transfer the credits gained for pre -existing diseases and specific waiting periods from one health insurance policy to another with the same insurer. Def 30. Network Provider means hospitals or health care providers enlisted by an insurer, TPA or jointly by an Insurer and TPA to provide medical services to an insured by a cashless facility. Def 31. New born Baby means baby born during the Policy Period and is aged up to 90 days. Def 32. Non-Network Provider means any hospital, day care centre or other provider that is not part of the network. Def 33. Notification of Claim means the process of intimating a claim to the insurer or",
+          "score": 0.73
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 5,
+          "text": "must not exceed the level of care necessary to provide safe, adequate and appropriate medical care in scope, duration or intensity; iii) must have been prescribed by a medical practitioner; iv) must conform to the professional standards widely accepted in international medical practice or by the medical community in India. Def 29. Migration means a facility provided to policyholders (including all members under family cover and group policies), to transfer the credits gained for pre -existing diseases and specific waiting periods from one health insurance policy to another with the same insurer. Def 30. Network Provider means hospitals or health care providers enlisted by an insurer, TPA or jointly by an Insurer and TPA to provide medical services to an insured by a cashless facility. Def 31. New born Baby means baby born during the Policy Period and is aged up to 90 days. Def 32. Non-Network Provider means any hospital, day care centre or other provider that is not part of the network. Def 33. Notification of Claim means the process of intimating a claim to the insurer or",
+          "score": 0.73
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "f. Intra Vitreal injections g. Robotic surgeries h. Stereotactic radio Surgeries i. Bronchial Thermoplasty j. Vaporisation of the prostrate (Green laser treatment or holmium laser treatment) k. IONM- (Intra Operative Neuro Monitoring) l. Stem cell therapy: Hematopoietic stem cells for bone marrow transplant for haematological conditions to be covered. 5 Waiting Period The Company is not liable to make any payment under the Policy in connection with or in respect of the following expenses till th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existing conditions other than HIV/AIDS and Disability(as mentioned in Policy Schedule) of continuous coverage after the date of inception of the first policy with",
+          "score": 0.65
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.5667,
+      "improved_average_score": 0.7033
+    },
+    {
+      "question_id": "Q11",
+      "question": "Can applicable policy exclusions be ignored for an urgent request?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 8,
+          "text": "the Policy Schedule and any applicable endorsements or extensions attaching to or forming part thereof, as amended from time to time, and shall be read together. The Policy contains details of the extent of c over available to the lnsured Person, applicable exclusions. and the terms & conditions applicable under the Policy. Def 24. Policy Period means the Commencement Date and either the Expiry Date specified in the policy schedule or the date of cancellation of this Policy, whichever is earlier",
+          "retrieval_score": 0.4
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "for the pre-existing disability covered, will have a waiting period of 24 months from the first policy inception date. ii. Any reconstructive / Cosmetic / prosthesis / external or internal device implanted/ used at home for the purpose of treatment of existing disability or used for activities of daily living are/is excluded from the policy 7 Specific Conditions Applicable for Persons with HIV - AIDS The Company will indemnify the Reasonable and Customary Charges for any Medical Condition which ",
+          "retrieval_score": 0.4
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 22,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 22 f. Territorial Jurisdiction All disputes or differences under or in relation to the interpretation of the terms, conditions, validity, construct, l",
+          "retrieval_score": 0.4
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement of or suppression of material fact are within the knowledge of the Insurer. 7. Cancellation a. The Policyholder may cancel this policy by giving 7 days’ written notice and in such an event, the Company shall refund to the Insured a pro -rata premium for the unexpired Policy Period. Note : For P olicies where premium is paid by instalment : In case of admissible claim under the Policy, future instalment for the current Policy Year will be adjusted in the claim amount and no refund of any premium will be applicable during the Policy Year. i. The Company may cancel the Policy at any time on grounds of established fraud or non-disclosure or misrepresentation by the Insured Person by giving 15 days’ written notice. There would be no refund of premium on cancellation on grounds of established fraud or non-disclosure or misrepresentation ii. Refund",
+          "score": 0.6
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 24,
+          "text": "On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment of benefit as per the contract. In case if the claim is repudiated Insurer will inform the Insured about the same in writing with reason for repudiation 10.4 Co-payment Each and every claim under the Policy shall be subject to a Co-payment of 20% applicable to claim amount admissible and payable as per the terms and conditions of the Policy. The amount payable shall be after deduction of the co-payment. This co-payment can be waived off by paying an additional premium(optional). 10.5 Services Offered by TPA Servicing of claims, i.e., claim admissions and assessments, under this Policy by way of preauthorization of cashless treatment or processing of claims other than cashless claims or both, as per the underlying terms and conditions of the policy. The services offered by a TPA shall not include: i. Claim settlement and claim rejection. ii. Any services directly to any",
+          "score": 0.6
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 17,
+          "text": "of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement of or suppression of material fact are within the knowledge of the Insurer. 7. Cancellation a. The Policyholder may cancel this policy by giving 7 days’ written notice and in such an event, the Company shall refund to the Insured a pro -rata premium for the unexpired Policy Period. Note : For P olicies where premium is paid by instalment : In case of admissible claim under the Policy, future instalment for the current Policy Year will be adjusted in the claim amount and no refund of any premium will be applicable during the Policy Year. i. The Company may cancel the Policy at any time on grounds of established fraud or non-disclosure or misrepresentation by the Insured Person by giving 15 days’ written notice. There would be no refund of premium on cancellation on grounds of established fraud or non-disclosure or misrepresentation ii. Refund",
+          "score": 0.6
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement of or suppression of material fact are within the knowledge of the Insurer. 7. Cancellation a. The Policyholder may cancel this policy by giving 7 days’ written notice and in such an event, the Company shall refund to the Insured a pro -rata premium for the unexpired Policy Period. Note : For P olicies where premium is paid by instalment : In case of admissible claim under the Policy, future instalment for the current Policy Year will be adjusted in the claim amount and no refund of any premium will be applicable during the Policy Year. i. The Company may cancel the Policy at any time on grounds of established fraud or non-disclosure or misrepresentation by the Insured Person by giving 15 days’ written notice. There would be no refund of premium on cancellation on grounds of established fraud or non-disclosure or misrepresentation ii. Refund",
+          "score": 0.63
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 24,
+          "text": "On receipt of claim documents from Insured Insurer shall assess the admissibility of claim as per Policy terms and conditions. Upon satisfactory completion of assessment and admission of claim, the Insurer will make the payment of benefit as per the contract. In case if the claim is repudiated Insurer will inform the Insured about the same in writing with reason for repudiation 10.4 Co-payment Each and every claim under the Policy shall be subject to a Co-payment of 20% applicable to claim amount admissible and payable as per the terms and conditions of the Policy. The amount payable shall be after deduction of the co-payment. This co-payment can be waived off by paying an additional premium(optional). 10.5 Services Offered by TPA Servicing of claims, i.e., claim admissions and assessments, under this Policy by way of preauthorization of cashless treatment or processing of claims other than cashless claims or both, as per the underlying terms and conditions of the policy. The services offered by a TPA shall not include: i. Claim settlement and claim rejection. ii. Any services directly to any",
+          "score": 0.63
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 17,
+          "text": "of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement of or suppression of material fact are within the knowledge of the Insurer. 7. Cancellation a. The Policyholder may cancel this policy by giving 7 days’ written notice and in such an event, the Company shall refund to the Insured a pro -rata premium for the unexpired Policy Period. Note : For P olicies where premium is paid by instalment : In case of admissible claim under the Policy, future instalment for the current Policy Year will be adjusted in the claim amount and no refund of any premium will be applicable during the Policy Year. i. The Company may cancel the Policy at any time on grounds of established fraud or non-disclosure or misrepresentation by the Insured Person by giving 15 days’ written notice. There would be no refund of premium on cancellation on grounds of established fraud or non-disclosure or misrepresentation ii. Refund",
+          "score": 0.63
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.6,
+      "improved_average_score": 0.63
+    },
+    {
+      "question_id": "Q12",
+      "question": "Does a passage that does not mention a treatment establish coverage?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.4
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases. Provided the insurers shall offer coverage du",
+          "retrieval_score": 0.4
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 11,
+          "text": "th e expiry of the waiting period and any claim in respect of any Insured Person directly or indirectly for, caused by, arising from or any way attributable to any of the following unless expressly stated to the contrary in this Policy. A. Waiting Periods 1. Pre-Existing Diseases (Code- Excl01) a) Expenses related to the treatment of a pre-existing Disease (PED) and its direct complications shall be excluded until the expiry of 24months for pre -existing disability/ 36 months for all pre-existin",
+          "retrieval_score": 0.4
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims amount. A co-payment does not reduce the Sum Insured. Def 11. Day Care Centre means any institution established for day care treatment of illness and/or injuries or a medical setup with a hospital and which has been registered with the local authorities, wherever applicable, and is under supervision of a re gistered and qualified medical practitioner and must comply with all minimum criterion as under: a. has qualified nursing staff under its employment. b. has qualified medical practitioner/s in charge. c. has fully equipped operation theatre of its own where surgica l procedures are carried out maintains daily records of patients and will make these accessible to the insurance company's authorized personnel Def 12. Day Care Treatment means medical treatment, and/or surgical procedure which is i. Undertaken under General or Local Anesthesia in a hospital/day care center in less than 24 hours because of technological",
+          "score": 0.555556
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 8,
+          "text": "of alcohol and drugs but does not include mental retardation which is a condition of arrested or incomplete development of mind of a person, specially characterised by sub normality of intelligence. Def 21. Medical practitioner for treatment of mental illnesses means a medical practitioner possessing a post-graduate degree or diploma in psychiatry awarded by an university recognized by the University Grants Commission established under the University Grants Commission Act, 1956, or awarded or recognized by the National Board of Examinations and included in the First Schedule to the Indian Medical Council Act, 1956, or recognized by th e Medical Council of India, constituted under the Indian Medical Council Act, 1956, and includes, in relation to any State, any medical officer who having regard to his knowledge and experience in psychiatry, has been declared by the Government of that State to be a psychiatrist for the purposes of this Act Def 22. Mental Health Establishment means any health establishment, including Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homoeopathy establishment, by whatever name called, either wholly or partly, meant for the care",
+          "score": 0.555556
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "treatment. This also includes: i. Custodial care either at home or in a nursing facility for personal care such as help with activities of daily living such as bathing, dressing, moving around either by skilled nurses or assistant or non-skilled persons. ii. Any services for people who are terminally ill to address physical, social, emotional and spiritual needs. 3. Obesity/Weight control: Code – Excl06: Expenses related to the surgical treatment of obesity that does not fulfi l all the below conditions: i. Surgery to be conducted is upon the advice of the Doctor ii. The surgery/Procedure conducted should be supported by clinical protocols iii. The member has to be 18 years of age or older and iv. Body Mass Index (BMI) A. greater than or equal to 40 or B. greater than or equal to 35 in conjunction with any of the following severe co -",
+          "score": 0.555556
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 13,
+          "text": "treatment. This also includes: i. Custodial care either at home or in a nursing facility for personal care such as help with activities of daily living such as bathing, dressing, moving around either by skilled nurses or assistant or non-skilled persons. ii. Any services for people who are terminally ill to address physical, social, emotional and spiritual needs. 3. Obesity/Weight control: Code – Excl06: Expenses related to the surgical treatment of obesity that does not fulfi l all the below conditions: i. Surgery to be conducted is upon the advice of the Doctor ii. The surgery/Procedure conducted should be supported by clinical protocols iii. The member has to be 18 years of age or older and iv. Body Mass Index (BMI) A. greater than or equal to 40 or B. greater than or equal to 35 in conjunction with any of the following severe co -",
+          "score": 0.615556
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 13,
+          "text": "treatment. This also includes: i. Custodial care either at home or in a nursing facility for personal care such as help with activities of daily living such as bathing, dressing, moving around either by skilled nurses or assistant or non-skilled persons. ii. Any services for people who are terminally ill to address physical, social, emotional and spiritual needs. 3. Obesity/Weight control: Code – Excl06: Expenses related to the surgical treatment of obesity that does not fulfi l all the below conditions: i. Surgery to be conducted is upon the advice of the Doctor ii. The surgery/Procedure conducted should be supported by clinical protocols iii. The member has to be 18 years of age or older and iv. Body Mass Index (BMI) A. greater than or equal to 40 or B. greater than or equal to 35 in conjunction with any of the following severe co -",
+          "score": 0.615556
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 3,
+          "text": "the visible and accessible parts of the body Def 10. Co-payment means a cost sharing requirement under a health insurance policy that provides that the policyholder/insured will bear a specified percentage of the admissible claims amount. A co-payment does not reduce the Sum Insured. Def 11. Day Care Centre means any institution established for day care treatment of illness and/or injuries or a medical setup with a hospital and which has been registered with the local authorities, wherever applicable, and is under supervision of a re gistered and qualified medical practitioner and must comply with all minimum criterion as under: a. has qualified nursing staff under its employment. b. has qualified medical practitioner/s in charge. c. has fully equipped operation theatre of its own where surgica l procedures are carried out maintains daily records of patients and will make these accessible to the insurance company's authorized personnel Def 12. Day Care Treatment means medical treatment, and/or surgical procedure which is i. Undertaken under General or Local Anesthesia in a hospital/day care center in less than 24 hours because of technological",
+          "score": 0.575556
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.5556,
+      "improved_average_score": 0.6022
+    },
+    {
+      "question_id": "Q13",
+      "question": "What is the exact room-rent limit?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not i",
+          "retrieval_score": 0.75
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 25,
+          "text": "shall be admissible. Time limit of 24 hrs shall not apply in respect of daycare treatment Pre Hospitalisation For 30 days prior to the date of hospitalization Post Hospitalisation For 60 days from the date of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day. 2.1ntensive Care Unit (ICU) charges/ Intensive Cardiac Care Unit (ICCU) charges al",
+          "retrieval_score": 0.75
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 7,
+          "text": "requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not i",
+          "retrieval_score": 0.75
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 7 skill in which an Insured Person participates or competes for entertainment or as part of his profession whether he/she ist rained or not. Def 2. Age means completed years on last birthday as on Commencement Date. Def 3. Ambulance means a motor vehicle operated by a licensed/authorized service provider and equipped for the transport and paramedical treatment of the person requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated",
+          "score": 0.714286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not include: i. Cost of pharmacy and consumables. ii. Cost of implants and medical devices iii. Cost of diagnostics Def 6. Alternative /AYUSH Treatment refers to hospitalization treatments given under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. Def 7. Biological Attack or Weapons means thee mission, discharge, dispersal, release or escape of any pathogenic (disease producing) micro-organisms and/or biologically produced toxins (including genetically modified organisms and chemically synthesized toxins) which are capable of causing any Illness, incapacitating disablement or death. Def 8. Chemical attack or weapons means the emission, discharge, dispersal, release or escape of any solid, liquid or gaseous chemical compound which ,when suitably distributed, is capable of causing any lllness, incapacitating disablement or death. Def 9. Claims means a demand made by the Policyholder/Insured Person or on his behalf, for payment of Medical Expenses under any other Benefit,",
+          "score": 0.714286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 25,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 25 Age eligibility for Children: Newborn to 17 years Grace Period For Yearly payment of mode, a fixed period of 30 days is to be allowed as Grace. Period and for all other modes of payment a fixed period of 15 days be allowed as grace period. Hospitalisation Expenses Expenses of Hospitalization for a minimum period of 24 consecutive hours only shall be admissible. Time limit of 24 hrs shall not apply in respect of daycare treatment Pre Hospitalisation For 30 days prior to the date of hospitalization Post Hospitalisation For 60 days from the date of discharge from the hospital Sublimit for Room/ Medical practitioner’s fee 1. Room Rent, Boarding, Nursing Expenses all-inclusive as provided by the Hospital / Nursing Home up to 1% of the sum insured per day.",
+          "score": 0.714286
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 7 skill in which an Insured Person participates or competes for entertainment or as part of his profession whether he/she ist rained or not. Def 2. Age means completed years on last birthday as on Commencement Date. Def 3. Ambulance means a motor vehicle operated by a licensed/authorized service provider and equipped for the transport and paramedical treatment of the person requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated",
+          "score": 0.864286
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 7,
+          "text": "and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated Medical Expenses will not include: i. Cost of pharmacy and consumables. ii. Cost of implants and medical devices iii. Cost of diagnostics Def 6. Alternative /AYUSH Treatment refers to hospitalization treatments given under Ayurveda, Yoga and Naturopathy, Unani, Siddha and Homeopathy systems. Def 7. Biological Attack or Weapons means thee mission, discharge, dispersal, release or escape of any pathogenic (disease producing) micro-organisms and/or biologically produced toxins (including genetically modified organisms and chemically synthesized toxins) which are capable of causing any Illness, incapacitating disablement or death. Def 8. Chemical attack or weapons means the emission, discharge, dispersal, release or escape of any solid, liquid or gaseous chemical compound which ,when suitably distributed, is capable of causing any lllness, incapacitating disablement or death. Def 9. Claims means a demand made by the Policyholder/Insured Person or on his behalf, for payment of Medical Expenses under any other Benefit,",
+          "score": 0.864286
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 7,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 7 skill in which an Insured Person participates or competes for entertainment or as part of his profession whether he/she ist rained or not. Def 2. Age means completed years on last birthday as on Commencement Date. Def 3. Ambulance means a motor vehicle operated by a licensed/authorized service provider and equipped for the transport and paramedical treatment of the person requiring medical attention. Def 4. Antiretroviral therapy (ART) is treatment of people infected with human immunodeficiency virus (HIV) using anti-HIV drugs. Def 5. Associated Medical Expenses means those expenses that an Insured Person has necessarily and actually incurred for medical treatment on account of Illness or Accident on the advice of a Medical Practitioner. In case of copayment associated with room rent higher than the entitled room rent limit. Associated",
+          "score": 0.864286
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.7143,
+      "improved_average_score": 0.8643
+    },
+    {
+      "question_id": "Q14",
+      "question": "Does a diagnosis alone prove policy coverage?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.25
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the meanings ascribed to them wherever they appear in this Policy",
+          "retrieval_score": 0.25
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and",
+          "retrieval_score": 0.25
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.571429
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.571429
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.428571
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.601429
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.601429
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.488571
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.5238,
+      "improved_average_score": 0.5638
+    },
+    {
+      "question_id": "Q15",
+      "question": "What should happen when submitted documents conflict?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the ",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "xiii. Legal heir/succession certificate, wherever applicable xiv. Any other relevant document required by Company/TPA for assessment of the claim. 1. The company shall only accept bills/invoices/medical treatment related documents only in the Insured Person's name for whom the claim is submitted. 2. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Comp any shall accept the copy of the documents and claim settlement advice,",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 23,
+          "text": "fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the ",
+          "retrieval_score": 0.5
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 23 9.1 Procedure for reimbursement of claims: For reimbursement of claims the insured person may submit the necessary documents to Company within the prescribed time limit as specified hereunder. S.No Type of Claim Prescribed Time limit 1. Reimbursement of hospitalization, day care and prehospitalization expenses Within thirty days of date of discharge from hospital 2. Reimbursement of post hospitalization expenses Within fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted",
+          "score": 0.285714
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. i. Dully filled Claim form ii. Identity proof of the claimant iii. Medical practitioner's prescription advising admission. iv. Original bills with itemized break-up v. Payment receipts vi. Discharge summary including complete medical history of the patient along with other details. vii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending medical practitioner viii. OT notes or Surgeon's certificate giving details of the operation performed (for surgical cases). ix. Sticker/invoices of the Implants, wherever applicable. x. MLR (Medico Legal Report copy if carried out and FIR (First information report) if registered, wherever applicable. xi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque. xii. KYC (Identity proof with Address) of the proposer, where claim liability is above Rs 1 Lakh",
+          "score": 0.285714
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "wherever applicable. xi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque. xii. KYC (Identity proof with Address) of the proposer, where claim liability is above Rs 1 Lakh or as per AML Guidelines xiii. Legal heir/succession certificate, wherever applicable xiv. Any other relevant document required by Company/TPA for assessment of the claim. 1. The company shall only accept bills/invoices/medical treatment related documents only in the Insured Person's name for whom the claim is submitted. 2. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Comp any shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the",
+          "score": 0.285714
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 23 9.1 Procedure for reimbursement of claims: For reimbursement of claims the insured person may submit the necessary documents to Company within the prescribed time limit as specified hereunder. S.No Type of Claim Prescribed Time limit 1. Reimbursement of hospitalization, day care and prehospitalization expenses Within thirty days of date of discharge from hospital 2. Reimbursement of post hospitalization expenses Within fifteen days from completion of post hospitalization treatment 10.2 Notification of Claim Notice with full particulars shall be sent to the Company /TPA (if applicable} as under: 1. Within 24 hours from the date of emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted",
+          "score": 0.285714
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "emergency hospitalization required or before the Insured Person's discharge from Hospital, whichever is earlier. 2. At least 48 hours prior to admission in Hospital in case of a planned Hospitalization 10.3 Documents to be submitted The reimbursement claim is to be supported with the following documents and submitted within the prescribed time limit. i. Dully filled Claim form ii. Identity proof of the claimant iii. Medical practitioner's prescription advising admission. iv. Original bills with itemized break-up v. Payment receipts vi. Discharge summary including complete medical history of the patient along with other details. vii. Investigation/ Diagnostic test reports etc. supported by the prescription from attending medical practitioner viii. OT notes or Surgeon's certificate giving details of the operation performed (for surgical cases). ix. Sticker/invoices of the Implants, wherever applicable. x. MLR (Medico Legal Report copy if carried out and FIR (First information report) if registered, wherever applicable. xi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque. xii. KYC (Identity proof with Address) of the proposer, where claim liability is above Rs 1 Lakh",
+          "score": 0.285714
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 23,
+          "text": "wherever applicable. xi. NEFT Details (to enable direct credit of claim amount in bank account) and cancelled cheque. xii. KYC (Identity proof with Address) of the proposer, where claim liability is above Rs 1 Lakh or as per AML Guidelines xiii. Legal heir/succession certificate, wherever applicable xiv. Any other relevant document required by Company/TPA for assessment of the claim. 1. The company shall only accept bills/invoices/medical treatment related documents only in the Insured Person's name for whom the claim is submitted. 2. In the event of a claim lodged under the Policy and the original documents having been submitted to any other insurer, the Comp any shall accept the copy of the documents and claim settlement advice, duly certified by the other insurer subject to satisfaction of the",
+          "score": 0.285714
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.2857,
+      "improved_average_score": 0.2857
+    },
+    {
+      "question_id": "Q16",
+      "question": "Can a policy clause be invented when retrieval finds no matching clause?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.2
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "and the premium paid shall be forfeited. Any amount already paid against claims made under this Policy but which are found fraudulent later shall be repaid by all recipient(s)/Policyholder(s), who have made that particular claim, who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of",
+          "retrieval_score": 0.2
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 18,
+          "text": "insurance plan with an Indian General/Health insurer as per Guidelines on portability, the proposed Insured Person will get all the accrued continuity benefits in waiting periods as under: i. The waiting periods specified in Section 5 shall be reduced by the number of continuous preceding years of coverage of the Insured Person under the previous health insurance Policy. ii. Portability benefit will be offered to the extent of sum of previous sum insured and accrued bonus (as part of the sum ins",
+          "retrieval_score": 0.2
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.545455
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 21,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 21 shall be effective only when an endorsement on the policy is made. In the event of death of the Insured Person , the Company will pay the nominee (as named in the Policy Schedule/endorsement (if any)) and in case there is no subsisting nominee, to the legal heirs or legal representatives of the Insured Person whose discharge shall be treated as full and final discharge of its liability under the Policy 9.2 Specific Conditions I. Condition Precedent to the contract a. Arbitration clause i. If any dispute or difference shall arise as to the quantum to be paid under this Policy (liability being otherwise admitted) such differenc e shall independent of all other questions be referred to the decision of a sole arbitrator to be appointed in writing by the",
+          "score": 0.545455
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.545455
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.575455
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 21,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 21 shall be effective only when an endorsement on the policy is made. In the event of death of the Insured Person , the Company will pay the nominee (as named in the Policy Schedule/endorsement (if any)) and in case there is no subsisting nominee, to the legal heirs or legal representatives of the Insured Person whose discharge shall be treated as full and final discharge of its liability under the Policy 9.2 Specific Conditions I. Condition Precedent to the contract a. Arbitration clause i. If any dispute or difference shall arise as to the quantum to be paid under this Policy (liability being otherwise admitted) such differenc e shall independent of all other questions be referred to the decision of a sole arbitrator to be appointed in writing by the",
+          "score": 0.575455
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 17,
+          "text": "who shall be jointly and severally liable for such repayment to the Insurer. For the purpose of this clause, the expression \"fraud\" means any of the following acts committed by the Insured Person or by his agent or the hospital/doctor/any other party acting on behalf of the Insured Person, with intent to deceive the insurer or to induce the insurer to issue an insurance policy: a. the suggestion, as a fact of that which is not true and which the Insured Person does not believe to be true; b. the active concealment of a fact by the Insured Person having knowledge or belief of the fact; c. any other act fitted to deceive; and d. any such act or omission as the law specially declares to be fraudulent. The Company shall not repudiate the claim and / or forfeit the Policy benefits on the ground of Fraud, if the Insured Person / beneficiary can prove that the mis-statement was true to the best of his knowledge and there was no deliberate intention to suppress the fact or that such mis-statement",
+          "score": 0.575455
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.5455,
+      "improved_average_score": 0.5755
+    },
+    {
+      "question_id": "Q17",
+      "question": "Is a benefit sub-limit necessarily equal to the total sum insured?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting Period means a period from the inception of this Policy during which specif",
+          "retrieval_score": 0.625
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting Period means a period from the inception of this Policy during which specif",
+          "retrieval_score": 0.625
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of ",
+          "retrieval_score": 0.5
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.666667
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of acceptance of the risk, to determine the rates, advantages, terms and conditions of the cover to be granted Def 29. Sub-limit means a cost sharing requirement under a health insurance policy in which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting",
+          "score": 0.666667
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.666667
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 9,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of acceptance of the risk, to determine the rates, advantages, terms and conditions of the cover to be granted Def 29. Sub-limit means a cost sharing requirement under a health insurance policy in which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting",
+          "score": 0.796667
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 9,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 9 insurer in respect of a risk, in order to enable the insurer to take informed decision in the context of underwriting the risk, and in the event of acceptance of the risk, to determine the rates, advantages, terms and conditions of the cover to be granted Def 29. Sub-limit means a cost sharing requirement under a health insurance policy in which an insurer would not be liable defined limit. The Sub-limit as applicable under the Schedule against the relevant Cover in force under the Policy. Def 30. Sum Insured means the pre-defined limit specified in the Policy Schedule and represents the maximum, total and cumulative liability for any and all claims made under the Policy in respect of each insured person as mentioned in the Policy Schedule. Def 31. Waiting",
+          "score": 0.796667
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospital/ Day Care Centre, following Medical Advice of a duly qualified Medical Practitioner, the Company shall indemnify Medical Expenses necessarily incurred towards the Covers in force under the Policy, as specified in the Policy Schedule. Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the",
+          "score": 0.786667
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.6667,
+      "improved_average_score": 0.7933
+    },
+    {
+      "question_id": "Q18",
+      "question": "What should happen when the policy schedule is missing?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 1,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 1 1. Preamble This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the ‘Company’) to the p",
+          "retrieval_score": 0.3333
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.3333
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "Provided further that, any amount payable under the Policy shall be subject to the terms of coverage (including co -pay, sub limits), exclusions, conditions and definitions contained herein. Maximum liability of the Company under all such Claims paid under indemnity, during each Policy Year shall be the Sum Insured opted and specified in the Schedule. 3. Definitions The terms defined below and at other junctures in the Policy have the meanings ascribed to them wherever they appear in this Policy",
+          "retrieval_score": 0.3333
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 21,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 21 shall be effective only when an endorsement on the policy is made. In the event of death of the Insured Person , the Company will pay the nominee (as named in the Policy Schedule/endorsement (if any)) and in case there is no subsisting nominee, to the legal heirs or legal representatives of the Insured Person whose discharge shall be treated as full and final discharge of its liability under the Policy 9.2 Specific Conditions I. Condition Precedent to the contract a. Arbitration clause i. If any dispute or difference shall arise as to the quantum to be paid under this Policy (liability being otherwise admitted) such differenc e shall independent of all other questions be referred to the decision of a sole arbitrator to be appointed in writing by the",
+          "score": 0.555556
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 21,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 21 shall be effective only when an endorsement on the policy is made. In the event of death of the Insured Person , the Company will pay the nominee (as named in the Policy Schedule/endorsement (if any)) and in case there is no subsisting nominee, to the legal heirs or legal representatives of the Insured Person whose discharge shall be treated as full and final discharge of its liability under the Policy 9.2 Specific Conditions I. Condition Precedent to the contract a. Arbitration clause i. If any dispute or difference shall arise as to the quantum to be paid under this Policy (liability being otherwise admitted) such differenc e shall independent of all other questions be referred to the decision of a sole arbitrator to be appointed in writing by the",
+          "score": 0.555556
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 1,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 1 1. Preamble This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the ‘Company’) to the proposer mentioned in the Policy Schedule (hereinafter called the ‘Policyholder’) to cover the person(s) named i n the Policy Schedule (hereinafter called the ‘Insured Person(s)’). The Policy is based on the statements and declaration provided by the Policyholder in the Proposal Form as well as in any welcome or other tele - verification calls with the Company’s author ized person or based on any medical test conducted and is subject to receipt of the requisite premium. This policy is specially designed for. A. Covering Persons with Disability as per The Rights of Persons with Disabilities Act, 2016 and The Mental Healthcare Act,2017. The cover under this policy",
+          "score": 0.444444
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 21,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 21 shall be effective only when an endorsement on the policy is made. In the event of death of the Insured Person , the Company will pay the nominee (as named in the Policy Schedule/endorsement (if any)) and in case there is no subsisting nominee, to the legal heirs or legal representatives of the Insured Person whose discharge shall be treated as full and final discharge of its liability under the Policy 9.2 Specific Conditions I. Condition Precedent to the contract a. Arbitration clause i. If any dispute or difference shall arise as to the quantum to be paid under this Policy (liability being otherwise admitted) such differenc e shall independent of all other questions be referred to the decision of a sole arbitrator to be appointed in writing by the",
+          "score": 0.645556
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 21,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 21 shall be effective only when an endorsement on the policy is made. In the event of death of the Insured Person , the Company will pay the nominee (as named in the Policy Schedule/endorsement (if any)) and in case there is no subsisting nominee, to the legal heirs or legal representatives of the Insured Person whose discharge shall be treated as full and final discharge of its liability under the Policy 9.2 Specific Conditions I. Condition Precedent to the contract a. Arbitration clause i. If any dispute or difference shall arise as to the quantum to be paid under this Policy (liability being otherwise admitted) such differenc e shall independent of all other questions be referred to the decision of a sole arbitrator to be appointed in writing by the",
+          "score": 0.645556
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 1,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 1 1. Preamble This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the ‘Company’) to the proposer mentioned in the Policy Schedule (hereinafter called the ‘Policyholder’) to cover the person(s) named i n the Policy Schedule (hereinafter called the ‘Insured Person(s)’). The Policy is based on the statements and declaration provided by the Policyholder in the Proposal Form as well as in any welcome or other tele - verification calls with the Company’s author ized person or based on any medical test conducted and is subject to receipt of the requisite premium. This policy is specially designed for. A. Covering Persons with Disability as per The Rights of Persons with Disabilities Act, 2016 and The Mental Healthcare Act,2017. The cover under this policy",
+          "score": 0.534444
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.5185,
+      "improved_average_score": 0.6085
+    },
+    {
+      "question_id": "Q19",
+      "question": "Can a different insurance policy establish this policy's coverage?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 2 2. Operating Clause If during the Policy Period the Insured Person is required to be Hospitalized for treatment of an Illness or Injury at a Hospita",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and",
+          "retrieval_score": 0.5
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly and thirty days in all other cases. Provided the insurers shall offer coverage du",
+          "retrieval_score": 0.5
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long term impairment of the insured person’s health. Def 16. Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly",
+          "score": 0.666667
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 4,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long term impairment of the insured person’s health. Def 16. Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly",
+          "score": 0.666667
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 1,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 1 1. Preamble This Policy is a contract of insurance issued by HDFC ERGO General Insurance Company Limited (hereinafter called the ‘Company’) to the proposer mentioned in the Policy Schedule (hereinafter called the ‘Policyholder’) to cover the person(s) named i n the Policy Schedule (hereinafter called the ‘Insured Person(s)’). The Policy is based on the statements and declaration provided by the Policyholder in the Proposal Form as well as in any welcome or other tele - verification calls with the Company’s author ized person or based on any medical test conducted and is subject to receipt of the requisite premium. This policy is specially designed for. A. Covering Persons with Disability as per The Rights of Persons with Disabilities Act, 2016 and The Mental Healthcare Act,2017. The cover under this policy",
+          "score": 0.555556
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 4,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long term impairment of the insured person’s health. Def 16. Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly",
+          "score": 0.746667
+        },
+        {
+          "source": "policy_wording.pdf",
+          "page": 4,
+          "text": "HDFC ERGO General Insurance Company Limited Policy Wording HDFC ERGO EquiCover Health HDFC ERGO General Insurance Company Limited. IRDAI Reg. No.146 CIN: U66030MH2007PLC177117. Registered & Corporate Office : 6th Floor, Leela Business Park, Andheri -Kurla Road, Andheri (East), Mumbai – 400 059. UIN: HDFC ERGO EquiCover Health - HDFHLIP23192V012223 4 disclosure of any material fact. Def 15. Emergency Care means management for an illness or injury which results in symptoms which occur suddenly and unexpectedly, and requires immediate care by a medical practitioner to prevent death or serious long term impairment of the insured person’s health. Def 16. Grace Period means the specified period of time, immediately following the premium due date during which premium payment can be made to renew or continue a policy in force without loss of continuity benefits pertaining to waiting periods and coverage of pre-existing diseases. Coverage need not be available during the period for which no premium is received . The grace period for payment of the premium for all types of insurance policies shall be: fifteen days where premium payment mode is monthly",
+          "score": 0.746667
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 18,
+          "text": "migration benefit shall n ot apply to any other additional increased Sum Insured. iii. Migration under this product shall be allowed only due to withdrawal of the product subject to IRDAI Regulations 9. Portability The Insured Person will have the option to port the Policy to same product of other insurers as per extant Guidelines related to portability, If such person is presently covered and has been continuously covered without any lapses under this health insurance plan with an Indian General/Health insurer as per Guidelines on portability, the proposed Insured Person will get all the accrued continuity benefits in waiting periods as under: i. The waiting periods specified in Section 5 shall be reduced by the number of continuous preceding years of coverage of the Insured Person under the previous health insurance Policy. ii. Portability benefit will be offered to the extent of sum of previous sum insured and accrued bonus (as part of the sum insured), portability benefit shall not apply to any other additional increased Sum Insured. 10. Renewal of Policy: A health insurance policy shall be renewable",
+          "score": 0.655556
+        }
+      ],
+      "top_k_overlap": 0.5,
+      "baseline_average_score": 0.6296,
+      "improved_average_score": 0.7163
+    },
+    {
+      "question_id": "Q20",
+      "question": "What should the system do when evidence is insufficient?",
+      "original_retrieved_evidence": [
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 2,
+          "text": "of any of the following: i. Central or State Government AYUSH Hospital; or ii. Teaching hospital attached to AYUSH College recognized by the Central Government /Central Council of Indian Medicine/ Central Council for Homeopathy; or iii. AYUSH Hospital, standalone or co-located with in-patient healthcare facility of any recognized system of medicine, registered with the local authorities, wherever applicable, and is under the supervision of a qualified registered AYUSH Medical Practitioner and mu",
+          "retrieval_score": 0.3333
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 12,
+          "text": "of all types 13. Hydrocele 14. Non-Infective Arthritis 15. Piles, Fissures and Fistula in anus 16. Pilonidal sinus, Sinusitis and related disorders 17. Prolapse inter Vertebral Disc and Spinal Diseases unless arising from accident. 18. Calculi in urinary system, Gall Bladder and Bile duct, excluding malignancy.",
+          "retrieval_score": 0.3333
+        },
+        {
+          "source": "equicover-health-cis-pw.pdf",
+          "page": 20,
+          "text": "can also lodge an online complaint through the website of Council for Insurance Ombudsmen (CIO) www.cioins.co.in Dedicated Helpline For Email ID Contact Number Senior Citizen seniorcitizen@hdfcergo.com 022 6158 2026 Women - 022 6158 2055 You may also refer the Grievance Redressal Escalation matrix on our website https://www.hdfcergo.com/customer-voice/grievances If Insured Person is not satisfied with the redressal of grievance through above methods, the Insured Person may also approach the offi",
+          "retrieval_score": 0.3333
+        }
+      ],
+      "baseline_top_k": [
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 3,
+          "text": "2024. doi: 10.1109/ICRA57147.2024.10611447. Yi Yu, Liuyi Yao, Yuexiang Xie, Qingquan Tan, Jiaqi Feng, Yaliang Li, and Libing Wu. Agentic memory: Learning unified long-term and short-term memory management for large language model agents.arXiv preprint arXiv:2601.01885, 2026. A APPENDIX A.1 MEMORYLIFECYCLE: INITIALIZATION, UPDATE,ANDCONSOLIDATION Initialization.The system is bootstrapped with 10 synthetic seed violations generated via GPT- 4 (OpenAI et al., 2024). Each seed follows the episodic tuple formate i =⟨c i, si, hi, ti⟩. For example:⟨push glass vase,kitchen,breakage,t 0⟩,⟨navigate toward human, hallway,collision,t 0⟩, and⟨grasp knife by blade,workshop,cut injury, t0⟩. These seeds cover three common hazard categories (fragile objects, human proximity, sharp/hot items) and provide the minimum retrieval base needed before the system encounters real violations. Update.When the safety filter fails to block a command and a violation occurs (detected via en- vironment feedback such as force sensors, collision detection, or human annotation), the system automatically constructs a new episodic entrye new =⟨c new, snew, hnew, tnew⟩and appends it toM ep. No human confirmation is required for the addition, though a confidence score is assigned based on the detection modality (sensor-based detections receive higher",
+          "score": 0.444444
+        },
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 4,
+          "text": "than incorrect episodic entries. Specifically, the semantic rule ⟨heavy object×push,block,0.30⟩incorrectly flagged a safe command to push a sturdy wooden chair, because the consolidation process generalized from episodes involving fragile heavy objects (e.g., ceramic pots) to all heavy objects. Episodic memory entries, by contrast, did not directly cause false positives because their retrieval threshold (δep = 0.8) requires high similarity to a specific past violation, making spurious matches unlikely. To reduce false positives, we identify two refinement strategies for future work: •Negative feedback loop:When a blocked command is overridden by a human operator (indicating a false positive), the system records this as anegative examplefor the triggering rule, lowering its confidenceθor narrowing its pattern scope. After sufficient negative examples, an overly broad rule can be split into more specific sub-rules. •Confidence decay:Semantic rules that have not been reinforced by new episodic entries over a sustained period have theirθgradually reduced, preventing stale or overgeneralized rules from persisting indefinitely. These mechanisms were not implemented in our current preliminary system but represent important directions for improving precision without sacrificing safety coverage. A.3 DISCUSSION: WHYMEMORYWORKS Episodic",
+          "score": 0.444444
+        },
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 5,
+          "text": "Published as a conference paper at ICLR 2026 A.4 DETAILEDLIMITATIONS ANDFUTUREWORK Cold Start Problem.Initial deployment requires seed violations. We use 10 synthetic examples generated via LLM (OpenAI et al., 2024) simulation of common robotic hazards (e.g., “push frag- ile object,” “navigate near human,” “grasp sharp edge”). In practice, a few real violations during supervised deployment would suffice to bootstrap the system. Memory Capacity Management.We cap episodic storage at 100 entries to prevent unbounded growth. Older, infrequent violations are archived but can be retrieved if needed. Consolidation mitigates this limitation by compressing frequent patterns into semantic rules, which have no cap. Retrieval Latency.Current implementation averages 200ms per command: 150ms for CLIP (Rad- ford et al., 2021) encoding and 50ms for similarity computation. This is acceptable for navigation tasks but may require optimization for high-frequency manipulation control. Potential improvements include pre-computing command embeddings or using approximate nearest neighbor search. Future Directions.(1)Multi-agent memory sharing: Multiple robots contribute to a shared safety memory, enabling fleet-wide learning from individual violations. (2)Hierarchical consolidation: Extend beyond episodic→semantic to include procedural memory for routine safety checks. (3) Active",
+          "score": 0.333333
+        }
+      ],
+      "improved_top_k": [
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 3,
+          "text": "2024. doi: 10.1109/ICRA57147.2024.10611447. Yi Yu, Liuyi Yao, Yuexiang Xie, Qingquan Tan, Jiaqi Feng, Yaliang Li, and Libing Wu. Agentic memory: Learning unified long-term and short-term memory management for large language model agents.arXiv preprint arXiv:2601.01885, 2026. A APPENDIX A.1 MEMORYLIFECYCLE: INITIALIZATION, UPDATE,ANDCONSOLIDATION Initialization.The system is bootstrapped with 10 synthetic seed violations generated via GPT- 4 (OpenAI et al., 2024). Each seed follows the episodic tuple formate i =⟨c i, si, hi, ti⟩. For example:⟨push glass vase,kitchen,breakage,t 0⟩,⟨navigate toward human, hallway,collision,t 0⟩, and⟨grasp knife by blade,workshop,cut injury, t0⟩. These seeds cover three common hazard categories (fragile objects, human proximity, sharp/hot items) and provide the minimum retrieval base needed before the system encounters real violations. Update.When the safety filter fails to block a command and a violation occurs (detected via en- vironment feedback such as force sensors, collision detection, or human annotation), the system automatically constructs a new episodic entrye new =⟨c new, snew, hnew, tnew⟩and appends it toM ep. No human confirmation is required for the addition, though a confidence score is assigned based on the detection modality (sensor-based detections receive higher",
+          "score": 0.464444
+        },
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 4,
+          "text": "than incorrect episodic entries. Specifically, the semantic rule ⟨heavy object×push,block,0.30⟩incorrectly flagged a safe command to push a sturdy wooden chair, because the consolidation process generalized from episodes involving fragile heavy objects (e.g., ceramic pots) to all heavy objects. Episodic memory entries, by contrast, did not directly cause false positives because their retrieval threshold (δep = 0.8) requires high similarity to a specific past violation, making spurious matches unlikely. To reduce false positives, we identify two refinement strategies for future work: •Negative feedback loop:When a blocked command is overridden by a human operator (indicating a false positive), the system records this as anegative examplefor the triggering rule, lowering its confidenceθor narrowing its pattern scope. After sufficient negative examples, an overly broad rule can be split into more specific sub-rules. •Confidence decay:Semantic rules that have not been reinforced by new episodic entries over a sustained period have theirθgradually reduced, preventing stale or overgeneralized rules from persisting indefinitely. These mechanisms were not implemented in our current preliminary system but represent important directions for improving precision without sacrificing safety coverage. A.3 DISCUSSION: WHYMEMORYWORKS Episodic",
+          "score": 0.464444
+        },
+        {
+          "source": "49_Learning_Safe_Robot_Plannin.pdf",
+          "page": 5,
+          "text": "Published as a conference paper at ICLR 2026 A.4 DETAILEDLIMITATIONS ANDFUTUREWORK Cold Start Problem.Initial deployment requires seed violations. We use 10 synthetic examples generated via LLM (OpenAI et al., 2024) simulation of common robotic hazards (e.g., “push frag- ile object,” “navigate near human,” “grasp sharp edge”). In practice, a few real violations during supervised deployment would suffice to bootstrap the system. Memory Capacity Management.We cap episodic storage at 100 entries to prevent unbounded growth. Older, infrequent violations are archived but can be retrieved if needed. Consolidation mitigates this limitation by compressing frequent patterns into semantic rules, which have no cap. Retrieval Latency.Current implementation averages 200ms per command: 150ms for CLIP (Rad- ford et al., 2021) encoding and 50ms for similarity computation. This is acceptable for navigation tasks but may require optimization for high-frequency manipulation control. Potential improvements include pre-computing command embeddings or using approximate nearest neighbor search. Future Directions.(1)Multi-agent memory sharing: Multiple robots contribute to a shared safety memory, enabling fleet-wide learning from individual violations. (2)Hierarchical consolidation: Extend beyond episodic→semantic to include procedural memory for routine safety checks. (3) Active",
+          "score": 0.353333
+        }
+      ],
+      "top_k_overlap": 1.0,
+      "baseline_average_score": 0.4074,
+      "improved_average_score": 0.4274
+    }
+  ]
+}

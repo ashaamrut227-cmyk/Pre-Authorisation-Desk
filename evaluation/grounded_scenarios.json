@@ -1,0 +1,163 @@
+
+[
+  {
+    "id": "G01",
+    "question": "What is the waiting period for cataract treatment?",
+    "evidence": "Illustrative test excerpt: Cataract and age-related eye ailments are subject to a 24-month waiting period.",
+    "reference_answer": "Cataract and age-related eye ailments are subject to a 24-month waiting period.",
+    "baseline_answer": "Cataract treatment has a 12-month waiting period and is automatically covered afterward.",
+    "evidence_first_answer": "The supplied evidence states a 24-month waiting period for cataract and age-related eye ailments."
+  },
+  {
+    "id": "G02",
+    "question": "What is the initial waiting period for a pre-existing disability?",
+    "evidence": "Illustrative test excerpt: A pre-existing disability covered under the policy is subject to a 24-month initial waiting period.",
+    "reference_answer": "A covered pre-existing disability is subject to a 24-month initial waiting period.",
+    "baseline_answer": "A pre-existing disability is covered immediately without any waiting period.",
+    "evidence_first_answer": "The evidence specifies a 24-month initial waiting period for a pre-existing disability covered under the policy."
+  },
+  {
+    "id": "G03",
+    "question": "What co-payment applies to the covered disability?",
+    "evidence": "Illustrative test excerpt: A 20% co-payment applies unless it is waived under the policy.",
+    "reference_answer": "A 20% co-payment applies unless waived under the policy.",
+    "baseline_answer": "The co-payment is 10% for every disability-related claim.",
+    "evidence_first_answer": "The supplied excerpt states a 20% co-payment unless it is waived under the policy."
+  },
+  {
+    "id": "G04",
+    "question": "Is cataract treatment subject to a sub-limit?",
+    "evidence": "Illustrative test excerpt: Cataract expenses are subject to the applicable policy sub-limits.",
+    "reference_answer": "Cataract expenses are subject to applicable policy sub-limits.",
+    "baseline_answer": "Cataract treatment has no sub-limit and is paid in full.",
+    "evidence_first_answer": "The evidence says cataract expenses are subject to applicable policy sub-limits; the actual limit is not provided in this excerpt."
+  },
+  {
+    "id": "G05",
+    "question": "What is the exact monetary sub-limit for cataract?",
+    "evidence": "Illustrative test excerpt: Cataract expenses are subject to applicable policy sub-limits. This excerpt does not state the monetary amount.",
+    "reference_answer": "The exact monetary sub-limit cannot be determined from the supplied excerpt.",
+    "baseline_answer": "The cataract sub-limit is ₹50,000 per eye.",
+    "evidence_first_answer": "The supplied excerpt does not state the monetary cataract sub-limit. Check the applicable policy schedule or sub-limit table."
+  },
+  {
+    "id": "G06",
+    "question": "Does the policy guarantee approval of every hospital pre-authorisation request?",
+    "evidence": "Illustrative test excerpt: A pre-authorisation request is subject to policy terms, coverage conditions, and review of submitted documents.",
+    "reference_answer": "No guarantee is stated; the request is subject to policy terms, coverage conditions, and document review.",
+    "baseline_answer": "Every complete pre-authorisation request is guaranteed approval within two hours.",
+    "evidence_first_answer": "The evidence does not guarantee approval. The request is subject to policy terms, coverage conditions, and review of submitted documents."
+  },
+  {
+    "id": "G07",
+    "question": "What documents are needed for pre-authorisation?",
+    "evidence": "Illustrative test excerpt: The request should include available medical records and the treating doctor's relevant clinical details. Additional documents may be requested.",
+    "reference_answer": "Submit available medical records and relevant clinical details; additional documents may be requested.",
+    "baseline_answer": "Only an identity card is required, and no other documents can be requested.",
+    "evidence_first_answer": "The excerpt calls for available medical records and relevant clinical details from the treating doctor. Additional documents may be requested."
+  },
+  {
+    "id": "G08",
+    "question": "Can an incomplete request be automatically approved?",
+    "evidence": "Illustrative test excerpt: Submitted documents are reviewed against policy requirements. Additional documents may be requested when information is insufficient.",
+    "reference_answer": "The excerpt does not support automatic approval; additional documents may be requested when information is insufficient.",
+    "baseline_answer": "Incomplete requests are automatically approved to avoid delays.",
+    "evidence_first_answer": "The evidence does not support automatic approval. Additional documents may be requested when information is insufficient."
+  },
+  {
+    "id": "G09",
+    "question": "What should happen if the policy wording is unclear?",
+    "evidence": "Illustrative test excerpt: Where the available wording or documents do not establish coverage, the case should be referred for human review.",
+    "reference_answer": "Refer the case for human review when the available wording or documents do not establish coverage.",
+    "baseline_answer": "Assume the treatment is covered and approve the request.",
+    "evidence_first_answer": "The evidence says to refer the case for human review when the available wording or documents do not establish coverage."
+  },
+  {
+    "id": "G10",
+    "question": "Does a waiting period alone establish that a claim is payable?",
+    "evidence": "Illustrative test excerpt: Waiting periods are one policy condition. Coverage remains subject to the applicable policy terms, exclusions, limits, and other conditions.",
+    "reference_answer": "No. Other policy terms, exclusions, limits, and conditions also apply.",
+    "baseline_answer": "Yes. Once the waiting period ends, every related claim must be paid.",
+    "evidence_first_answer": "No. The excerpt says coverage remains subject to policy terms, exclusions, limits, and other conditions."
+  },
+  {
+    "id": "G11",
+    "question": "Can an exclusion be ignored when a hospital requests urgent approval?",
+    "evidence": "Illustrative test excerpt: Coverage decisions must consider applicable policy exclusions and conditions, including when a request is urgent.",
+    "reference_answer": "No. Applicable exclusions and conditions must still be considered.",
+    "baseline_answer": "Yes. Urgency overrides all policy exclusions.",
+    "evidence_first_answer": "No. The supplied evidence requires applicable exclusions and conditions to be considered even for urgent requests."
+  },
+  {
+    "id": "G12",
+    "question": "What should the system do when the requested treatment is not mentioned in the retrieved passage?",
+    "evidence": "Illustrative test excerpt: The retrieved passage does not mention the requested treatment and does not establish whether it is covered.",
+    "reference_answer": "Do not infer coverage from this passage; retrieve relevant wording or escalate for human review.",
+    "baseline_answer": "The treatment is covered because it is not explicitly excluded in the passage.",
+    "evidence_first_answer": "This passage does not establish coverage. Retrieve relevant policy wording or escalate for human review."
+  },
+  {
+    "id": "G13",
+    "question": "What is the exact room-rent limit?",
+    "evidence": "Illustrative test excerpt: Room eligibility is governed by the applicable policy schedule. The supplied passage contains no room-rent amount.",
+    "reference_answer": "The exact room-rent limit is not available in the supplied passage.",
+    "baseline_answer": "The room-rent limit is ₹5,000 per day.",
+    "evidence_first_answer": "The supplied passage does not state an exact room-rent amount. Check the applicable policy schedule."
+  },
+  {
+    "id": "G14",
+    "question": "Does a diagnosis by itself prove policy coverage?",
+    "evidence": "Illustrative test excerpt: Medical diagnosis is considered with policy eligibility, exclusions, waiting periods, limits, and supporting documentation.",
+    "reference_answer": "No. Diagnosis must be considered alongside eligibility, exclusions, waiting periods, limits, and documentation.",
+    "baseline_answer": "Yes. Every diagnosed condition is covered automatically.",
+    "evidence_first_answer": "No. The evidence requires considering eligibility, exclusions, waiting periods, limits, and supporting documentation."
+  },
+  {
+    "id": "G15",
+    "question": "What should happen when submitted documents conflict?",
+    "evidence": "Illustrative test excerpt: Material inconsistencies in submitted documents should be clarified before a coverage decision is finalized.",
+    "reference_answer": "Clarify material inconsistencies before finalizing the coverage decision.",
+    "baseline_answer": "Ignore the conflicting document and approve the request.",
+    "evidence_first_answer": "The excerpt says material document inconsistencies should be clarified before finalizing the coverage decision."
+  },
+  {
+    "id": "G16",
+    "question": "Can the system invent a policy clause when retrieval finds no matching clause?",
+    "evidence": "Illustrative test excerpt: When no matching clause is found, the available evidence is insufficient to state a policy-specific rule.",
+    "reference_answer": "No. The system should state that evidence is insufficient and retrieve more information or escalate.",
+    "baseline_answer": "Yes. It may infer a standard industry clause and present it as policy wording.",
+    "evidence_first_answer": "No matching clause was found. The system should not invent policy wording; retrieve more evidence or escalate."
+  },
+  {
+    "id": "G17",
+    "question": "Does a policy sub-limit necessarily equal the total sum insured?",
+    "evidence": "Illustrative test excerpt: A sub-limit is a separate limit applicable to a specified benefit or expense. The total sum insured is a distinct policy value.",
+    "reference_answer": "No. A sub-limit for a specified benefit is distinct from the total sum insured.",
+    "baseline_answer": "Yes. Every sub-limit is equal to the total sum insured.",
+    "evidence_first_answer": "No. The excerpt distinguishes a benefit-specific sub-limit from the total sum insured."
+  },
+  {
+    "id": "G18",
+    "question": "What should happen when the policy schedule is missing?",
+    "evidence": "Illustrative test excerpt: The policy schedule may contain applicable insured amounts and benefit limits. Without it, schedule-dependent values cannot be confirmed.",
+    "reference_answer": "Do not guess schedule-dependent values; request the schedule or escalate.",
+    "baseline_answer": "Assume the highest available benefit limit and proceed with approval.",
+    "evidence_first_answer": "Schedule-dependent values cannot be confirmed without the schedule. Request it or escalate for review."
+  },
+  {
+    "id": "G19",
+    "question": "Can a retrieved passage from a different policy establish this policy's coverage?",
+    "evidence": "Illustrative test excerpt: Policy-specific coverage must be checked against the wording and schedule applicable to the insured person's policy.",
+    "reference_answer": "No. Verify the wording and schedule for the insured person's applicable policy.",
+    "baseline_answer": "Yes. Similar insurance policies have identical terms and limits.",
+    "evidence_first_answer": "No. Check the wording and schedule applicable to the insured person's policy."
+  },
+  {
+    "id": "G20",
+    "question": "What should the system say when evidence is insufficient to determine coverage?",
+    "evidence": "Illustrative test excerpt: If available evidence is insufficient to establish coverage, state the limitation and refer the case for further review.",
+    "reference_answer": "State that evidence is insufficient and refer the case for further review.",
+    "baseline_answer": "State that coverage is approved even though the evidence is insufficient.",
+    "evidence_first_answer": "The available evidence is insufficient to determine coverage. Refer the case for further review."
+  }
+]

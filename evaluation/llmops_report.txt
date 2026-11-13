@@ -1,0 +1,28 @@
+LLMOps OFFLINE EVALUATION REPORT
+======================================
+Scenarios: 20
+LLM API called: No
+Evaluation type: Lexical proxy using fixed answer fixtures
+
+AGGREGATE METRICS (0.0 to 1.0)
+--------------------------------------
+Groundedness: baseline=0.1250, evidence-first=0.6917, change=+0.5667
+Context relevance: baseline=0.4390, evidence-first=0.4390, change=+0.0000
+Faithfulness: baseline=0.2833, evidence-first=0.7377, change=+0.4544
+Hallucination rate: baseline=0.8750, evidence-first=0.3083, change=-0.5667
+
+INTERPRETATION
+--------------------------------------
+Higher is better: groundedness, context relevance, faithfulness.
+Lower is better: hallucination rate.
+A lexical score is only a screening signal, not proof of correctness.
+
+LIMITATIONS
+--------------------------------------
+- No real LLM was called.
+- Answers are prewritten test fixtures.
+- Evidence is illustrative and must be verified against the actual policy.
+- Review individual scenario results before drawing conclusions.
+
+JSON results: C:\Users\Tejaswini\OneDrive\Desktop\mini project mlops\evaluation\llmops_results.json
+Text report: C:\Users\Tejaswini\OneDrive\Desktop\mini project mlops\evaluation\llmops_report.txt

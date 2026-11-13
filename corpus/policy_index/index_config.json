@@ -1,0 +1,10 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "chunk_size": 700,
+  "chunk_overlap": 120,
+  "similarity": "inner_product_on_normalized_embeddings",
+  "source_document": "policy_wording.pdf",
+  "number_of_pages_with_text": 31,
+  "number_of_chunks": 174,
+  "embedding_dimension": 384
+}

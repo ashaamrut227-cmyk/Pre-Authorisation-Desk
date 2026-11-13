@@ -1,0 +1,142 @@
+[
+  {
+    "id": "EVAL-001",
+    "name": "Supported claim with complete documents",
+    "documents_complete": true,
+    "verification_status": "supported",
+    "expected_route": "approve-recommended"
+  },
+  {
+    "id": "EVAL-002",
+    "name": "Supported claim with missing documents",
+    "documents_complete": false,
+    "verification_status": "supported",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-003",
+    "name": "Contradicted claim with complete documents",
+    "documents_complete": true,
+    "verification_status": "contradicted",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-004",
+    "name": "Unverified claim with complete documents",
+    "documents_complete": true,
+    "verification_status": "unverified",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-005",
+    "name": "Contradicted claim with missing documents",
+    "documents_complete": false,
+    "verification_status": "contradicted",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-006",
+    "name": "Unverified claim with missing documents",
+    "documents_complete": false,
+    "verification_status": "unverified",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-007",
+    "name": "Invalid verification status",
+    "documents_complete": true,
+    "verification_status": "invalid",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-008",
+    "name": "Empty verification object",
+    "documents_complete": true,
+    "verification_status": null,
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-009",
+    "name": "Documents incomplete despite supported evidence",
+    "documents_complete": false,
+    "verification_status": "supported",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-010",
+    "name": "Complete documents and contradicted evidence",
+    "documents_complete": true,
+    "verification_status": "contradicted",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-011",
+    "name": "Complete documents and unverified evidence",
+    "documents_complete": true,
+    "verification_status": "unverified",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-012",
+    "name": "Unknown verification status",
+    "documents_complete": true,
+    "verification_status": "unknown",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-013",
+    "name": "Missing verification status",
+    "documents_complete": true,
+    "verification_status": null,
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-014",
+    "name": "Missing documents and unknown status",
+    "documents_complete": false,
+    "verification_status": "unknown",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-015",
+    "name": "Supported evidence and complete documents",
+    "documents_complete": true,
+    "verification_status": "supported",
+    "expected_route": "approve-recommended"
+  },
+  {
+    "id": "EVAL-016",
+    "name": "Supported evidence but documents not complete",
+    "documents_complete": false,
+    "verification_status": "supported",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-017",
+    "name": "Contradicted evidence requires review",
+    "documents_complete": true,
+    "verification_status": "contradicted",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-018",
+    "name": "Unverified evidence requires review",
+    "documents_complete": true,
+    "verification_status": "unverified",
+    "expected_route": "medical-review"
+  },
+  {
+    "id": "EVAL-019",
+    "name": "Missing documents take priority over evidence",
+    "documents_complete": false,
+    "verification_status": "contradicted",
+    "expected_route": "query-to-hospital"
+  },
+  {
+    "id": "EVAL-020",
+    "name": "Unknown evidence with missing documents",
+    "documents_complete": false,
+    "verification_status": "unknown",
+    "expected_route": "query-to-hospital"
+  }
+]
