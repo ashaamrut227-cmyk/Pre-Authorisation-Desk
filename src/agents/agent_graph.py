@@ -3,12 +3,14 @@ import time
 from typing import Any, Callable, Literal, TypedDict
 
 from langgraph.graph import END, START, StateGraph
+from langgraph.errors import GraphRecursionError
 
 from src.agent_metrics import agent_metrics
 from src.agents.intake_agent import run_intake_agent
 from src.agents.policy_agent import run_policy_agent
 
-MAX_AGENT_STEPS = 3
+MAX_AGENT_STEPS = 2
+GRAPH_RECURSION_LIMIT = 5
 
 
 class AgentState(TypedDict, total=False):
@@ -24,7 +26,6 @@ def _run_agent_with_metrics(
     agent_function: Callable[[dict[str, Any]], dict[str, Any]],
     request_data: dict[str, Any],
 ) -> dict[str, Any]:
-    """Run an agent and record its execution metrics."""
     started_at = time.perf_counter()
 
     try:
@@ -66,6 +67,9 @@ def intake_node(state: AgentState) -> dict[str, Any]:
 
 
 def policy_node(state: AgentState) -> dict[str, Any]:
+    if state.get("agent_steps", 0) >= MAX_AGENT_STEPS:
+        raise RuntimeError("Maximum agent-step limit reached.")
+
     result = _run_agent_with_metrics(
         "policy_agent",
         run_policy_agent,
@@ -100,9 +104,9 @@ def finalize_policy(state: AgentState) -> dict[str, Any]:
             "message": policy["reason"],
             "intake": state["intake_result"],
             "policy_review": policy,
-            "route": (
-                policy.get("routing") or {}
-            ).get("route", "medical-review"),
+            "route": (policy.get("routing") or {}).get(
+                "route", "medical-review"
+            ),
             "human_review_required": True,
             "final_coverage_decision": None,
         }
@@ -111,19 +115,19 @@ def finalize_policy(state: AgentState) -> dict[str, Any]:
 
 def choose_next(
     state: AgentState,
-) -> Literal["policy", "intake_finish", "policy_finish"]:
+) -> Literal["policy", "intake_finish"]:
     if state.get("agent_steps", 0) >= MAX_AGENT_STEPS:
         return "intake_finish"
 
     intake = state.get("intake_result", {})
 
-    if intake.get("status") != "ready_for_policy_review":
-        return "intake_finish"
+    if (
+        intake.get("status") == "ready_for_policy_review"
+        and intake.get("handoff_to") == "policy_agent"
+    ):
+        return "policy"
 
-    if intake.get("handoff_to") != "policy_agent":
-        return "intake_finish"
-
-    return "policy"
+    return "intake_finish"
 
 
 def build_agent_graph():
@@ -142,7 +146,6 @@ def build_agent_graph():
         {
             "policy": "policy",
             "intake_finish": "intake_finish",
-            "policy_finish": "policy_finish",
         },
     )
 
@@ -160,9 +163,26 @@ def run_agent_workflow(
         raise ValueError("request_data must be a dictionary.")
 
     graph = build_agent_graph()
-    result = graph.invoke({
-        "request_data": request_data,
-        "agent_steps": 0,
-    })
 
-    return result["final_result"]
+    try:
+        result = graph.invoke(
+            {
+                "request_data": request_data,
+                "agent_steps": 0,
+            },
+            config={
+                "recursion_limit": GRAPH_RECURSION_LIMIT,
+            },
+        )
+        return result["final_result"]
+
+    except GraphRecursionError:
+        return {
+            "status": "error",
+            "message": "Agent execution limit reached. Human review required.",
+            "intake": None,
+            "policy_review": None,
+            "route": "medical-review",
+            "human_review_required": True,
+            "final_coverage_decision": None,
+        }
